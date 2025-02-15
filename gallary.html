@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+
+
+.carousel-container {
+            max-width: 700px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .carousel img {
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            padding: 5px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        .gallery {
+            padding: 40px 0;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.08);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+
+    .carousel-container {
+        max-width: 800px;
+        margin: auto;
+        padding-top: 20px;
+    }
+    .carousel img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border-radius: 12px;
+    }
+    .carousel img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .custom-carousel-btn {
+        width: 7%;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        transition: background 0.3s ease;
+    }
+    .custom-carousel-btn:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- Small Multi-Image Carousel -->
+<div class="carousel-container">
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 3">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 4">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 5">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 6">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 7">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 8">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 9">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 10">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 11">
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <img src="Images/wafa_logo.webp" class="d-block w-100" alt="Image 12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+    <!-- Gallery Section -->
+    <div class="container gallery text-center">
+        <h2 class="mb-4" data-aos="fade-up">Our Gallery</h2>
+        <div class="row g-4">
+            <div class="col-6 col-lg-3" data-aos="zoom-in">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/wafa_logo.webp">
+                    <img src="Images/wafa_logo.webp" alt="Gallery Image 1">
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/wafa_logo.webp">
+                    <img src="Images/wafa_logo.webp" alt="Gallery Image 2">
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/wafa_logo.webp">
+                    <img src="Images/wafa_logo.webp" alt="Gallery Image 3">
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/wafa_logo.webp">
+                    <img src="Images/wafa_logo.webp" alt="Gallery Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Expanded View" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalImage = document.getElementById("modalImage");
+            document.querySelectorAll(".gallery-item").forEach(item => {
+                item.addEventListener("click", function () {
+                    modalImage.src = this.getAttribute("data-bs-src");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
