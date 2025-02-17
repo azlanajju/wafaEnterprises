@@ -362,9 +362,138 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="do-heading">
-                  <h1 id="About">Seasons</h1>
+                  <h1 id="About">Gallery</h1>
                 </div>
 <!-- contents here -->
+
+<style>
+.gallery {
+    padding: 40px 0px;
+}
+
+.gallery .row {
+    margin: 0;
+    row-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Lightbox Modal */
+/* .modal-content {
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+} */
+
+</style>
+
+
+<div class="container gallery text-center">
+  <div class="row g-4 mb-4">
+      <div class="col-6 col-lg-3" data-aos="zoom-in">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 1">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 2">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 3">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 4">
+          </div>
+      </div>
+  </div>
+
+  <div class="row g-4">
+      <div class="col-6 col-lg-3" data-aos="zoom-in">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 5">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 6">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 7">
+          </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
+              <img src="../Images/wafa_logo.webp" alt="Gallery Image 8">
+          </div>
+      </div>
+  </div>
+</div>
+
+
+      <!-- Lightbox Modal -->
+      <!-- <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Expanded View" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      AOS.init();
+
+      document.addEventListener("DOMContentLoaded", function () {
+          const modalImage = document.getElementById("modalImage");
+          document.querySelectorAll(".gallery-item").forEach(item => {
+              item.addEventListener("click", function () {
+                  modalImage.src = this.getAttribute("data-bs-src");
+              });
+          });
+      });
+  </script> -->
+
+
               
 
 </div>

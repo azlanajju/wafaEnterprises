@@ -365,7 +365,158 @@
                   <h1 id="About">Services</h1>
                 </div>
 <!-- contents here -->
-              
+
+<style>
+          .services-section {
+            text-align: center;
+            padding: 40px 0px;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4b382a;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(200, 155, 60, 0.1);
+            transition: 0.4s ease-in-out;
+        }
+
+        .service-card:hover::after {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* .service-icon {
+            font-size: 3rem;
+            color: #eec41c;
+            margin-bottom: 15px;
+        } */
+
+        .service-card h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #a8a7aa;
+        }
+
+        #service-info {
+            background: #efda8d3d;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: #000000;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".service-card");
+      const serviceInfo = document.getElementById("service-info");
+  
+      cards.forEach(card => {
+          card.addEventListener("mouseenter", () => {
+              const title = card.getAttribute("data-title");
+              const content = card.querySelector(".service-content").textContent;
+  
+              serviceInfo.innerHTML = `<strong>${title}:</strong> ${content}`;
+              serviceInfo.style.display = "block";
+          });
+  
+          card.addEventListener("mouseleave", () => {
+              serviceInfo.style.display = "none";
+          });
+      });
+  });
+  
+  </script>
+
+<section class="container services-section">
+  <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-title="Gold Schemes">
+              <i class="bi bi-cash-stack service-icon"></i>
+              <h5>Gold Schemes</h5>
+              <p>Secure Your Future with Gold Investment</p>
+              <p class="service-content" style="display: none;">Invest in gold effortlessly with our flexible payment plans and exclusive bonuses. Our gold schemes are designed to help you accumulate wealth securely while enjoying added benefits and financial stability.</p>
+          </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-title="Home Schemes">
+              <i class="bi bi-house-door service-icon"></i>
+              <h5>Home Schemes</h5>
+              <p>Your Dream Home, Made Affordable</p>
+              <p class="service-content" style="display: none;">Turn your dream of homeownership into reality with our easy installment options. Our home investment plans provide a stress-free and structured way to own your ideal home without financial strain.</p>
+          </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-title="Vehicles Schemes">
+              <i class="bi bi-car-front service-icon"></i>
+              <h5>Vehicle Schemes</h5>
+              <p>Drive Your Dream with Ease</p>
+              <p class="service-content" style="display: none;">Get behind the wheel of your dream vehicle with our hassle-free financing options. Our vehicle investment plans make ownership more accessible with convenient and affordable repayment solutions.</p>
+          </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-title="Seasonal Offers">
+              <i class="bi bi-stars service-icon"></i>
+              <h5>Seasonal Offers</h5>
+              <p>Exciting Rewards & Exclusive Deals</p>
+              <p class="service-content" style="display: none;">Enjoy special discounts, festival promotions, and exclusive rewards throughout the year! Whether it’s a festive season or a special occasion, our limited-time offers help you save more while investing smartly.</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Service Info Display Box -->
+  <div id="service-info" class="alert mt-4"></div>
+</section>
+
+          
 
 </div>
 
