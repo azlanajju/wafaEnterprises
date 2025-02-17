@@ -1151,3 +1151,147 @@ color: #878787;
     border-bottom: none !important;
   }
 }
+
+:root {
+  --primary-color: #2C3E50;
+  --accent-color: #E67E22;
+  --text-color: #2C3E50;
+  --light-gray: #f5f6fa;
+}
+
+.wafa-carousel-section {
+  padding: 4rem 0;
+  background-color: var(--light-gray);
+}
+
+.wafa-carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wafa-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wafa-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 500px;
+}
+
+.wafa-carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.wafa-carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wafa-carousel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.wafa-carousel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.wafa-carousel-quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0.2s;
+}
+
+.wafa-carousel-slide.active .wafa-carousel-title,
+.wafa-carousel-slide.active .wafa-carousel-quote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wafa-carousel-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.wafa-carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wafa-carousel-dot.active {
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.wafa-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.wafa-carousel-control:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.wafa-carousel-prev {
+  left: 20px;
+}
+
+.wafa-carousel-next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .wafa-carousel-inner {
+      height: 400px;
+  }
+
+  .wafa-carousel-title {
+      font-size: 1.5rem;
+  }
+
+  .wafa-carousel-quote {
+      font-size: 1rem;
+  }
+}
