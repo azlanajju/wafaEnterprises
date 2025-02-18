@@ -373,7 +373,8 @@
 
 .gallery .row {
     margin: 0;
-    row-gap: 20px;
+    row-gap: 40px;
+    margin-bottom: 20px;
 }
 
 .gallery-item {
@@ -386,7 +387,7 @@
 }
 
 .gallery-item:hover {
-    transform: scale(1.08);
+    transform: scale(1.0);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -400,6 +401,18 @@
 
 .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+#loadMoreBtn{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #000000;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Lightbox Modal */
@@ -421,56 +434,111 @@
 
 
 <div class="container gallery text-center">
-  <div class="row g-4 mb-4">
-      <div class="col-6 col-lg-3" data-aos="zoom-in">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 1">
+  <div id="galleryContainer">
+      <div class="row g-4 gallery-row">
+          <div class="col-12 col-lg-4" data-aos="zoom-in">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image1.webp">
+                  <img src="./Images/image1.webp" alt="Gallery Image 1">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image2.webp">
+                  <img src="./Images/image2.webp" alt="Gallery Image 2">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image3.webp">
+                  <img src="./Images/image3.webp" alt="Gallery Image 3">
+              </div>
           </div>
       </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 2">
+
+      <div class="row g-4 gallery-row">
+          <div class="col-12 col-lg-4" data-aos="zoom-in">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image4.webp">
+                  <img src="./Images/image4.webp" alt="Gallery Image 4">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image5.webp">
+                  <img src="./Images/image5.webp" alt="Gallery Image 5">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image6.webp">
+                  <img src="./Images/image6.webp" alt="Gallery Image 6">
+              </div>
           </div>
       </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 3">
+
+      <div class="row g-4 gallery-row">
+          <div class="col-12 col-lg-4" data-aos="zoom-in">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image7.webp">
+                  <img src="./Images/image7.webp" alt="Gallery Image 7">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image8.webp">
+                  <img src="./Images/image8.webp" alt="Gallery Image 8">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image9.webp">
+                  <img src="./Images/image9.webp" alt="Gallery Image 9">
+              </div>
           </div>
       </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 4">
+
+        <div class="row g-4 gallery-row">
+          <div class="col-12 col-lg-4" data-aos="zoom-in">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image10.webp">
+                  <img src="./Images/image10.webp" alt="Gallery Image 10">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image11.webp">
+                  <img src="./Images/image11.webp" alt="Gallery Image 11">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image12.webp">
+                  <img src="./Images/image12.webp" alt="Gallery Image 9">
+              </div>
+          </div>
+      </div>
+
+      <div class="row g-4 gallery-row">
+        <div class="col-12 col-lg-4" data-aos="zoom-in">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image13.webp">
+                <img src="./Images/image13.webp" alt="Gallery Image 13">
+            </div>
+        </div>
+        <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image14.webp">
+                <img src="./Images/image14.webp" alt="Gallery Image 14">
+            </div>
+        </div>
+        <div class="col-12 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image15.webp">
+                <img src="./Images/image15.webp" alt="Gallery Image 15">
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 gallery-row">
+      <div class="col-12 col-lg-4" data-aos="zoom-in">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/image16.webp">
+              <img src="./Images/image16.webp" alt="Gallery Image 16">
           </div>
       </div>
   </div>
 
-  <div class="row g-4">
-      <div class="col-6 col-lg-3" data-aos="zoom-in">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 5">
-          </div>
-      </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 6">
-          </div>
-      </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 7">
-          </div>
-      </div>
-      <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="../Images/wafa_logo.webp">
-              <img src="../Images/wafa_logo.webp" alt="Gallery Image 8">
-          </div>
-      </div>
-  </div>
+  <button id="loadMoreBtn" class="btn btn-primary mt-4">Load More</button>
 </div>
 
 
       <!-- Lightbox Modal -->
-      <!-- <div class="modal fade" id="imageModal" tabindex="-1">
+      <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -481,6 +549,37 @@
     </div>
 
     <script>
+
+      // gallery section 
+
+      document.addEventListener("DOMContentLoaded", function() {
+            let rows = document.querySelectorAll(".gallery-row");
+            let loadMoreBtn = document.getElementById("loadMoreBtn");
+            let currentVisibleRows = 2;
+
+            // Hide extra rows initially
+            rows.forEach((row, index) => {
+                if (index >= currentVisibleRows) {
+                    row.style.display = "none";
+                }
+            });
+
+            loadMoreBtn.addEventListener("click", function() {
+                let hiddenRows = Array.from(rows).filter(row => row.style.display === "none");
+                
+                if (hiddenRows.length > 0) {
+                    hiddenRows[0].style.display = "flex"; // Show next hidden row
+                }
+
+                if (hiddenRows.length === 1) {
+                    loadMoreBtn.style.display = "none"; // Hide button when all rows are shown
+                }
+            });
+        })
+
+
+
+// Lightbox Modal 
       AOS.init();
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -491,7 +590,7 @@
               });
           });
       });
-  </script> -->
+  </script>
 
 
               
