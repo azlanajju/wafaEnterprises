@@ -538,7 +538,7 @@
 
 
       <!-- Lightbox Modal -->
-      <div class="modal fade" id="imageModal" tabindex="-1">
+      <!-- <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -546,7 +546,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script>
 
@@ -557,7 +557,6 @@
             let loadMoreBtn = document.getElementById("loadMoreBtn");
             let currentVisibleRows = 2;
 
-            // Hide extra rows initially
             rows.forEach((row, index) => {
                 if (index >= currentVisibleRows) {
                     row.style.display = "none";
@@ -568,11 +567,11 @@
                 let hiddenRows = Array.from(rows).filter(row => row.style.display === "none");
                 
                 if (hiddenRows.length > 0) {
-                    hiddenRows[0].style.display = "flex"; // Show next hidden row
+                    hiddenRows[0].style.display = "flex"; 
                 }
 
                 if (hiddenRows.length === 1) {
-                    loadMoreBtn.style.display = "none"; // Hide button when all rows are shown
+                    loadMoreBtn.style.display = "none";
                 }
             });
         })
@@ -580,16 +579,16 @@
 
 
 // Lightbox Modal 
-      AOS.init();
+      // AOS.init();
 
-      document.addEventListener("DOMContentLoaded", function () {
-          const modalImage = document.getElementById("modalImage");
-          document.querySelectorAll(".gallery-item").forEach(item => {
-              item.addEventListener("click", function () {
-                  modalImage.src = this.getAttribute("data-bs-src");
-              });
-          });
-      });
+      // document.addEventListener("DOMContentLoaded", function () {
+      //     const modalImage = document.getElementById("modalImage");
+      //     document.querySelectorAll(".gallery-item").forEach(item => {
+      //         item.addEventListener("click", function () {
+      //             modalImage.src = this.getAttribute("data-bs-src");
+      //         });
+      //     });
+      // });
   </script>
 
 
