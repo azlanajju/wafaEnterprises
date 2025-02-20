@@ -1,0 +1,15 @@
+.golden_BG:hover {
+    background-image: linear-gradient(to right, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  }
+  .bg-golden {
+    background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+    color: brown;
+  }
+  .golden_Text {
+    background-image: linear-gradient(to right, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  

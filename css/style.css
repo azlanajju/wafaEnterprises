@@ -74,7 +74,9 @@ header.do-sticky {
   line-height: 16px;
   box-sizing: border-box;
   vertical-align: middle;
-  background-color: #eec41c;
+  background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  color: black;
+
   letter-spacing: 1.25px;
   text-transform: uppercase;
 }
@@ -908,8 +910,10 @@ position: relative;
 border-bottom: 1px solid #373636;
 }
 .single-cta i {
-color: #eec41c;
-font-size: 30px;
+  background-image: linear-gradient(to right, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  
+  color: transparent;
+  -webkit-background-clip: text;font-size: 30px;
 float: left;
 margin-top: 8px;
 }
@@ -994,8 +998,8 @@ left: 0;
 bottom: -15px;
 height: 2px;
 width: 50px;
-background: #eec41c;
-}
+background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+color: black;}
 .footer-widget ul li {
 display: inline-block;
 float: left;
@@ -1003,8 +1007,10 @@ width: 50%;
 margin-bottom: 12px;
 }
 .footer-widget ul li a:hover{
-color: #eec41c;
-}
+  background-image: linear-gradient(to right, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  
+  color: transparent;
+  -webkit-background-clip: text;}
 .footer-widget ul li a {
 color: #878787;
 text-transform: capitalize;
@@ -1023,13 +1029,13 @@ color: #fff;
 .subscribe-form button {
   position: absolute;
   right: 0;
-  background: #eec41c;
-  padding: 13px 20px;
+  background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+  color: black;  padding: 13px 20px;
   border: 1px solid #eec41c;
   top: 0;
 }
 .subscribe-form button i {
-color: #fff;
+color: #000;
 font-size: 22px;
 transform: rotate(-6deg);
 }
@@ -1294,4 +1300,12 @@ color: #878787;
   .wafa-carousel-quote {
       font-size: 1rem;
   }
+  .do-social{
+    display: none ;
+  
+  }
+  .phoneVisible{
+    display: block !important;
+  }
 }
+
