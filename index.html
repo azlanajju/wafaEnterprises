@@ -737,7 +737,7 @@
                   <div class="slideControls">
                     <span class="slidePrev"> <i class="ion ion-chevron-left"></i> </span> <span class="slideNext"> <i class="ion ion-chevron-right"></i> </span>
                   </div>
-                  <div class="text-center mt-auto pt-3"><a href="https://wafaenterprises.in/media.php" class="btn btn-sm btn-lng btn-outline-dark">View More</a></div>
+                  <div class="text-center mt-auto pt-3"><a href="https://wafaenterprises.in/media" class="btn btn-sm btn-lng btn-outline-dark">View More</a></div>
                 </div>
               </div>
             </div>
@@ -1257,7 +1257,7 @@
 
             if (book_name != "" && book_mobile != "" && book_email != "" && book_date != "") {
               $.ajax({
-                url: "https://wafaenterprises.in/book_appointment.php",
+                url: "https://wafaenterprises.in/book_appointment",
                 type: "POST",
                 data: { book_name: book_name, book_mobile: book_mobile, book_email: book_email, book_date: book_date, book_full: book_full, location_name: location_name },
                 success: function (data) {
@@ -1274,8 +1274,8 @@
           });
 
           var popupEnable = "no";
-          var script_name = "/index.php";
-          if (script_name == "/gold-protection-payment.php") var time = 20000;
+          var script_name = "/index";
+          if (script_name == "/gold-protection-payment") var time = 20000;
           else var time = 10000;
 
           popupEnable == "no"; //to disable popup temporarily
@@ -1303,7 +1303,7 @@
 		setTimeout( function(){ 
 			var cookie_value=Math.floor(Math.random() * 26) + Date.now();
 				$.ajax({
-		            url: "https://wafaenterprises.in/coin_check.php",
+		            url: "https://wafaenterprises.in/coin_check",
 		            type: 'POST',
 		            data: {cookie_value:cookie_value},
 		            success:    
@@ -1317,7 +1317,7 @@
 
 							$('.downloadImage').on('click',function(){
 		    		
-					    		window.location.href="https://wafaenterprises.in/download.php?image="+encodeURIComponent($image);
+					    		window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
 					    	});
 
 					    	$.cookie( 'CoinCookies12', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
@@ -1341,7 +1341,7 @@
 
 		setTimeout( function(){ 
 				$.ajax({
-		            url: "https://wafaenterprises.in/coin_check.php",
+		            url: "https://wafaenterprises.in/coin_check",
 		            type: 'POST',
 		            data: {cookie_value:cookie_value},
 		            success:    
@@ -1355,7 +1355,7 @@
 
 							$('.downloadImage').on('click',function(){
 		    		
-					    		window.location.href="https://wafaenterprises.in/download.php?image="+encodeURIComponent($image);
+					    		window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
 					    	});					    	
 		                }
 		              },

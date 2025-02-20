@@ -82,6 +82,7 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/css/ionicons.min.css">
     
+    
   </head>
   <body>
     <a rel="author" href="https://plus.google.com/u/1/117318959305093605821" style="position: fixed">Wafa Enterprises</a>
@@ -248,7 +249,16 @@
         <div class="do-header-bottom">
           <nav class="navbar navbar-expand-lg navbar-light pb-0 sticky-top">
             <div class="container">
-              <button id="menu_toggle" class="navbar-toggler mr-auto" type="button"><i class="ion ion-android-menu"></i></button>
+              <button id="menu_toggle" class="navbar-toggler mr-auto" type="button">                <i class="fas fa-bars"></i>  <!-- Font Awesome hamburger icon -->
+              </button>
+              <!-- JavaScript to Toggle Icon -->
+<script>
+  document.getElementById("menu_toggle").addEventListener("click", function () {
+      let icon = this.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times"); // Cross Icon
+  });
+</script>
               <a href="https://wafaenterprises.in/" class="do-mobile-logo"> <img src="../Images/wafa_full_logo.png" alt="Wafa Enterprises" /> </a>
 
 
