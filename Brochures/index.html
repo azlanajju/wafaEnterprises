@@ -265,8 +265,24 @@
       <div class="do-header-bottom">
         <nav class="navbar navbar-expand-lg navbar-light pb-0 sticky-top">
           <div class="container">
-            <button id="menu_toggle" class="navbar-toggler mr-auto" type="button"><i
-                class="ion ion-android-menu"></i></button>
+<button id="menu_toggle" class="navbar-toggler mr-auto" type="button">
+    <i class="fas fa-bars"></i>  <!-- Font Awesome hamburger icon -->
+</button>
+<script>
+    document.getElementById("menu_toggle").addEventListener("click", function () {
+        let icon = this.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times"); // Cross Icon
+    });
+</script>
+
+<!-- Optional CSS for Smooth Transition -->
+<style>
+    #menu_toggle i {
+        font-size: 24px;
+        transition: transform 0.3s ease-in-out;
+    }
+</style>
             <a href="https://wafaenterprises.in/" class="do-mobile-logo"> <img src="../Images/wafa_full_logo.png"
                 alt="Wafa Enterprises" /> </a>
 
@@ -397,48 +413,81 @@
               </div>
               <!-- contents here -->
 
-              <section class="brochure-section">
-                
-                <!-- Embedded PDF Viewer -->
-                <iframe src="https://drive.google.com/file/d/11O-J4EvL-82z21nK5p8EzzsueblfUihB/preview" width="100%" height="500px"></iframe>
-            
-                <!-- Download Button -->
-                <div class="download-btn">
-                    <a href="https://drive.google.com/uc?export=download&id=11O-J4EvL-82z21nK5p8EzzsueblfUihB" target="_blank">
-                        <button>Download Brochure</button>
+              <section class="brochure-container">
+                <!-- Season 6 Brochure -->
+                <div class="brochure-section">
+                  <h2>Season 6</h2>
+                  <iframe src="https://drive.google.com/file/d/13ParkKf8LThmCuh-mewDcnBevkaO0-OM/preview" width="100%" height="500px"></iframe>
+                  <div class="download-btn">
+                    <a href="https://drive.google.com/uc?export=download&id=13ParkKf8LThmCuh-mewDcnBevkaO0-OM" target="_blank">
+                      <button>Download Brochure</button>
                     </a>
+                  </div>
                 </div>
-            </section>
-            
-            <style>
+                
+                <!-- Season 7 Brochure -->
+                <div class="brochure-section">
+                  <h2>Season 7</h2>
+                  <iframe src="https://drive.google.com/file/d/11O-J4EvL-82z21nK5p8EzzsueblfUihB/preview" width="100%" height="500px"></iframe>
+                  <div class="download-btn">
+                    <a href="https://drive.google.com/uc?export=download&id=11O-J4EvL-82z21nK5p8EzzsueblfUihB" target="_blank">
+                      <button>Download Brochure</button>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              
+              <style>
+                .brochure-container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 20px;
+                  max-width: 1200px;
+                  margin: auto;
+                }
+              
                 .brochure-section {
-                    text-align: center;
-                    margin: 20px auto;
-                    max-width: 800px;
+                  text-align: center;
+                  flex: 1;
+                  min-width: 300px;
+                  max-width: 500px;
                 }
+              
                 iframe {
-                    width: 100%;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
+                  width: 100%;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
                 }
+              
                 .download-btn {
-                    margin-top: 20px;
+                  margin-top: 10px;
                 }
+              
                 button {
-                    padding: 10px 20px;
-                    background: #007bff;
-                    color: white;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-size: 16px;
+                  padding: 10px 20px;
+                  background: #007bff;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
                 }
+              
                 button:hover {
-                    background: #0056b3;
+                  background: #0056b3;
                 }
-            </style>
-            
-            
+              
+                @media (max-width: 768px) {
+                  .brochure-container {
+                    flex-direction: column;
+                    align-items: center;
+                  }
+                }
+              </style>
+              
+
+
 
             </div>
           </div>

@@ -265,8 +265,25 @@
       <div class="do-header-bottom">
         <nav class="navbar navbar-expand-lg navbar-light pb-0 sticky-top">
           <div class="container">
-            <button id="menu_toggle" class="navbar-toggler mr-auto" type="button"><i
-                class="ion ion-android-menu"></i></button>
+            <button id="menu_toggle" class="navbar-toggler mr-auto" type="button">
+              <i class="fas fa-bars"></i>  <!-- Font Awesome hamburger icon -->
+          </button>
+          <script>
+              document.getElementById("menu_toggle").addEventListener("click", function () {
+                  let icon = this.querySelector("i");
+                  icon.classList.toggle("fa-bars");
+                  icon.classList.toggle("fa-times"); // Cross Icon
+              });
+          </script>
+          
+          <!-- Optional CSS for Smooth Transition -->
+          <style>
+              #menu_toggle i {
+                  font-size: 24px;
+                  transition: transform 0.3s ease-in-out;
+              }
+          </style>
+          
             <a href="https://wafaenterprises.in/" class="do-mobile-logo"> <img src="../Images/wafa_full_logo.png"
                 alt="Wafa Enterprises" /> </a>
 

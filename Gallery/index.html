@@ -248,8 +248,24 @@
         <div class="do-header-bottom">
           <nav class="navbar navbar-expand-lg navbar-light pb-0 sticky-top">
             <div class="container">
-              <button id="menu_toggle" class="navbar-toggler mr-auto" type="button"><i class="ion ion-android-menu"></i></button>
-              <a href="https://wafaenterprises.in/" class="do-mobile-logo"> <img src="../Images/wafa_full_logo.png" alt="Wafa Enterprises" /> </a>
+              <button id="menu_toggle" class="navbar-toggler mr-auto" type="button">
+                <i class="fas fa-bars"></i>  <!-- Font Awesome hamburger icon -->
+            </button>
+            <script>
+                document.getElementById("menu_toggle").addEventListener("click", function () {
+                    let icon = this.querySelector("i");
+                    icon.classList.toggle("fa-bars");
+                    icon.classList.toggle("fa-times"); // Cross Icon
+                });
+            </script>
+            
+            <!-- Optional CSS for Smooth Transition -->
+            <style>
+                #menu_toggle i {
+                    font-size: 24px;
+                    transition: transform 0.3s ease-in-out;
+                }
+            </style>              <a href="https://wafaenterprises.in/" class="do-mobile-logo"> <img src="../Images/wafa_full_logo.png" alt="Wafa Enterprises" /> </a>
 
               <a rel="index nofollow" class="ml-auto text-center do-shop rounded-circle d-block d-md-block d-lg-none d-xl-none" href="https://www.candere.com/trending/express-delivery.html?utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=ShopOnlineMobileHeader&utm_term=utmcsr%3Dgoogle%7Cutmcmd%3Dcpc%7Cutmccn%3D%7Cutmctr%3D" target="_blank">Shop Online</a>
 
