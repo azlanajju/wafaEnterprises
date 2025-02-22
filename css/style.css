@@ -1160,7 +1160,7 @@ color: #878787;
 
 :root {
   --primary-color: #2C3E50;
-  --accent-color: #E67E22;
+  --accent-color: #ccab56;
   --text-color: #2C3E50;
   --light-gray: #f5f6fa;
 }
@@ -1171,7 +1171,7 @@ color: #878787;
 }
 
 .wafa-carousel-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   position: relative;
 }
@@ -1179,7 +1179,7 @@ color: #878787;
 .wafa-carousel {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
