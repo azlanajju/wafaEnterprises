@@ -1,93 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
+    <title>About Us - [Company Name]</title>
     <style>
-        /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Arial', sans-serif;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-}
+        body {
+            background-color: #f8f9fa;
+            color: #2d3748;
+        }
 
-/* Container for image and text */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .wafafounder-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
 
-/* Image Section */
-.image-section {
-    flex: 1;
-    margin-right: 40px;
-}
+        .wafafounder-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 24px;
+            position: relative;
+            text-align: center;
+        }
 
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+        .wafafounder-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #3182ce;
+            border-radius: 2px;
+        }
 
-/* Text Section */
-.text-section {
-    flex: 2;
-}
+        .wafafounder-top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
 
-.text-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
+        .wafafounder-text-section {
+            flex: 1;
+            padding-right: 40px;
+        }
 
-.text-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-}
+        .wafafounder-text-section p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
+        .wafafounder-image-section {
+            flex: 1;
+            padding-left: 20px;
+        }
 
-    .image-section {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
+        .wafafounder-image-section img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .wafafounder-seasons-section {
+            margin-top: 40px;
+        }
+
+        .wafafounder-seasons-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 30px;
+            position: relative;
+            text-align: center;
+        }
+
+        .wafafounder-seasons-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background-color: #3182ce;
+            border-radius: 2px;
+        }
+
+        .wafafounder-seasons-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .wafafounder-card {
+            flex: 1;
+            height: 150px;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: #1a202c;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+            background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(90deg, #ffeb3b, #fff176);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
+        .wafafounder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .wafafounder-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a202c;
+        }
+
+        .wafafounder-card p {
+            font-size: 1rem;
+            color: #3182ce;
+            font-style: italic;
+        }
+
+        .wafafounder-view-more {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .wafafounder-view-more a {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1a202c;
+            border: 2px solid #1a202c;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .wafafounder-view-more a:hover {
+            background-color: #1a202c;
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wafafounder-container {
+                margin: 30px 15px;
+                padding: 20px;
+            }
+
+            .wafafounder-title {
+                font-size: 2rem;
+            }
+
+            .wafafounder-top-section {
+                flex-direction: column;
+            }
+
+            .wafafounder-text-section,
+            .wafafounder-image-section {
+                padding: 0;
+                width: 100%;
+            }
+
+            .wafafounder-image-section img {
+                height: 300px;
+                margin-top: 20px;
+            }
+
+            .wafafounder-seasons-title {
+                font-size: 1.8rem;
+            }
+
+            .wafafounder-seasons-cards {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .wafafounder-card h3 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="image-section">
-            <img src="https://via.placeholder.com/400" alt="About Us Image">
+    <section>
+        <div class="wafafounder-container">
+            <h1 class="wafafounder-title">Founders Message</h1>
+            <div class="wafafounder-top-section">
+                <div class="wafafounder-text-section">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt voluptates, laborum
+                        esse cum ipsa nam rem, molestiae assumenda enim culpa saepe quibusdam eveniet mollitia aperiam,
+                        reiciendis eaque. Expedita, sint!</p>
+                </div>
+                <div class="wafafounder-image-section">
+                    <img src="./Images/wafa_full_logo.png" alt="Wafa Enterprises">
+                </div>
+            </div>
+
+            <br><br>
+            <div class="wafafounder-seasons-section">
+                <h2 class="wafafounder-seasons-title">SEASONS</h2>
+                <div class="wafafounder-seasons-cards">
+                    <a href="./seasons/" class="wafafounder-card">
+                        <h3>Season 4</h3>
+                        <p>23rd Feb 2025</p>
+                    </a>
+                    <a href="./seasons/" class="wafafounder-card">
+                        <h3>Season 5</h3>
+                        <p>23rd Feb 2025</p>
+                    </a>
+                    <a href="./seasons/" class="wafafounder-card">
+                        <h3>Season 6</h3>
+                        <p>23rd Feb 2025</p>
+                    </a>
+                </div>
+                <div class="wafafounder-view-more">
+                    <a href="./seasons/">View More</a>
+                </div>
+            </div>
         </div>
-        <div class="text-section">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero tincidunt, 
-               eget fermentum nisi tincidunt. Vivamus euismod, nisi vel consectetur interdum, nisl nisi consectetur 
-               nisi, eget consectetur nisi nisi vel nisi. Nullam scelerisque leo a libero tincidunt, eget fermentum 
-               nisi tincidunt. Vivamus euismod, nisi vel consectetur interdum, nisl nisi consectetur nisi, eget 
-               consectetur nisi nisi vel nisi.</p>
-        </div>
-    </div>
+    </section>
 </body>
+
 </html>
