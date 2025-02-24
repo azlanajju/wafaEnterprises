@@ -3,16 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAFA Carousel</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>About Us</title>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
+/* Container for image and text */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text Section */
+.text-section {
+    flex: 2;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
     </style>
 </head>
 <body>
-   
-   
+    <div class="container">
+        <div class="image-section">
+            <img src="https://via.placeholder.com/400" alt="About Us Image">
+        </div>
+        <div class="text-section">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero tincidunt, 
+               eget fermentum nisi tincidunt. Vivamus euismod, nisi vel consectetur interdum, nisl nisi consectetur 
+               nisi, eget consectetur nisi nisi vel nisi. Nullam scelerisque leo a libero tincidunt, eget fermentum 
+               nisi tincidunt. Vivamus euismod, nisi vel consectetur interdum, nisl nisi consectetur nisi, eget 
+               consectetur nisi nisi vel nisi.</p>
+        </div>
+    </div>
 </body>
 </html>
