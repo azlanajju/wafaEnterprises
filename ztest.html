@@ -1,266 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - [Company Name]</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', 'Arial', sans-serif;
-        }
 
-        body {
-            background-color: #f8f9fa;
-            color: #2d3748;
-        }
-
-        .wafafounder-container {
-            max-width: 1100px;
+        .wafaseasons-container {
+            max-width: 1280px;
             margin: 60px auto;
-            padding: 40px;
+            padding: 50px;
             background-color: #ffffff;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
             overflow: hidden;
         }
 
-        .wafafounder-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 24px;
-            position: relative;
-            text-align: center;
+        .wafaseasons-season {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        .wafafounder-title::after {
+        .wafaseasons-season:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .wafaseasons-season:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .wafaseasons-season:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .wafaseasons-season:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .wafaseasons-season:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .wafaseasons-season:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .wafaseasons-season:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wafaseasons-season-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 25px;
+            border-left: 5px solid #facc15;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wafaseasons-season-title::after {
             content: '';
             position: absolute;
             bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 25px;
             width: 60px;
             height: 3px;
-            background-color: #3182ce;
+            background-color: #facc15;
             border-radius: 2px;
         }
 
-        .wafafounder-top-section {
+        .wafaseasons-images {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
         }
 
-        .wafafounder-text-section {
-            flex: 1;
-            padding-right: 40px;
-        }
-
-        .wafafounder-text-section p {
-            font-size: 1.15rem;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .wafafounder-image-section {
-            flex: 1;
-            padding-left: 20px;
-        }
-
-        .wafafounder-image-section img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .wafafounder-seasons-section {
-            margin-top: 40px;
-        }
-
-        .wafafounder-seasons-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #1a202c;
-            margin-bottom: 30px;
+        .wafaseasons-image {
+            flex: 1 1 300px;
+            max-width: 360px;
             position: relative;
-            text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .wafafounder-seasons-title::after {
+        .wafaseasons-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .wafaseasons-image img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .wafaseasons-image::after {
             content: '';
             position: absolute;
-            bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 2px;
-            background-color: #3182ce;
-            border-radius: 2px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .wafafounder-seasons-cards {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .wafafounder-card {
-            flex: 1;
-            height: 150px;
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            text-decoration: none;
-            color: #1a202c;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            border: 2px solid transparent;
-            background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(90deg, #ffeb3b, #fff176);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
-            animation: gradientMove 3s linear infinite;
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 0%;
-            }
-
-            100% {
-                background-position: 100% 0%;
-            }
-        }
-
-        .wafafounder-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .wafafounder-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1a202c;
-        }
-
-        .wafafounder-card p {
-            font-size: 1rem;
-            color: #3182ce;
-            font-style: italic;
-        }
-
-        .wafafounder-view-more {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .wafafounder-view-more a {
-            display: inline-block;
-            padding: 10px 30px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #1a202c;
-            border: 2px solid #1a202c;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .wafafounder-view-more a:hover {
-            background-color: #1a202c;
-            color: #ffffff;
+        .wafaseasons-image:hover::after {
+            opacity: 1;
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .wafaseasons-image {
+                flex: 1 1 45%;
+                max-width: 45%;
+            }
+        }
+
         @media (max-width: 768px) {
-            .wafafounder-container {
+            .wafaseasons-container {
                 margin: 30px 15px;
-                padding: 20px;
+                padding: 25px;
             }
 
-            .wafafounder-title {
+            .wafaseasons-season-title {
                 font-size: 2rem;
+                padding-left: 15px;
             }
 
-            .wafafounder-top-section {
-                flex-direction: column;
-            }
-
-            .wafafounder-text-section,
-            .wafafounder-image-section {
-                padding: 0;
-                width: 100%;
-            }
-
-            .wafafounder-image-section img {
-                height: 300px;
-                margin-top: 20px;
-            }
-
-            .wafafounder-seasons-title {
-                font-size: 1.8rem;
-            }
-
-            .wafafounder-seasons-cards {
-                flex-direction: column;
+            .wafaseasons-images {
                 gap: 15px;
             }
 
-            .wafafounder-card h3 {
-                font-size: 1.3rem;
+            .wafaseasons-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .wafaseasons-image img {
+                height: 200px;
             }
         }
-    </style>
-</head>
 
-<body>
+        .wafaseasons-register {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.wafaseasons-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.wafaseasons-btn-register {
+    color: #ffffff;
+    background: linear-gradient(45deg, #3182ce, #63b3ed);
+    border: none;
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.5);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+.wafaseasons-btn-register::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.wafaseasons-btn-register:hover::before {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+.wafaseasons-btn-register:hover {
+    background: linear-gradient(45deg, #2563eb, #93c5fd);
+    box-shadow: 0 6px 20px rgba(49, 130, 206, 0.7);
+    transform: translateY(-3px);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(49, 130, 206, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(49, 130, 206, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(49, 130, 206, 0.5);
+    }
+}
+
+        .wafaseasons-btn-download {
+            color: #1a202c;
+            background-color: transparent;
+            border: 2px solid #facc15;
+        }
+
+        .wafaseasons-btn-download:hover {
+            background-color: #facc15;
+            color: #ffffff;
+        }
+    </style>
+
     <section>
-        <div class="wafafounder-container">
-            <h1 class="wafafounder-title">Founders Message</h1>
-            <div class="wafafounder-top-section">
-                <div class="wafafounder-text-section">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt voluptates, laborum
-                        esse cum ipsa nam rem, molestiae assumenda enim culpa saepe quibusdam eveniet mollitia aperiam,
-                        reiciendis eaque. Expedita, sint!</p>
-                </div>
-                <div class="wafafounder-image-section">
-                    <img src="./Images/wafa_full_logo.png" alt="Wafa Enterprises">
+        <div class="wafaseasons-container">
+            <div class="wafaseasons-register">
+                <a href="https://wa.me/919845119468?text=I%20want%20to%20participate" class="wafaseasons-btn wafaseasons-btn-register">Register Now</a>
+            </div>
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 7</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+7+Image+1" alt="Season 7 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+7+Image+2" alt="Season 7 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+7+Image+3" alt="Season 7 Image 3">
+                    </div>
                 </div>
             </div>
 
-            <br><br>
-            <div class="wafafounder-seasons-section">
-                <h2 class="wafafounder-seasons-title">SEASONS</h2>
-                <div class="wafafounder-seasons-cards">
-                    <a href="./seasons/" class="wafafounder-card">
-                        <h3>Season 4</h3>
-                        <p>23rd Feb 2025</p>
-                    </a>
-                    <a href="./seasons/" class="wafafounder-card">
-                        <h3>Season 5</h3>
-                        <p>23rd Feb 2025</p>
-                    </a>
-                    <a href="./seasons/" class="wafafounder-card">
-                        <h3>Season 6</h3>
-                        <p>23rd Feb 2025</p>
-                    </a>
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 6</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+6+Image+1" alt="Season 6 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+6+Image+2" alt="Season 6 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+6+Image+3" alt="Season 6 Image 3">
+                    </div>
                 </div>
-                <div class="wafafounder-view-more">
-                    <a href="./seasons/">View More</a>
+            </div>
+
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 5</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+5+Image+1" alt="Season 5 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+5+Image+2" alt="Season 5 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+5+Image+3" alt="Season 5 Image 3">
+                    </div>
                 </div>
+            </div>
+
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 4</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+4+Image+1" alt="Season 4 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+4+Image+2" alt="Season 4 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+4+Image+3" alt="Season 4 Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 3</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+3+Image+1" alt="Season 3 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+3+Image+2" alt="Season 3 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+3+Image+3" alt="Season 3 Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 2</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+2+Image+1" alt="Season 2 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+2+Image+2" alt="Season 2 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+2+Image+3" alt="Season 2 Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wafaseasons-season">
+                <h2 class="wafaseasons-season-title">Season 1</h2>
+                <div class="wafaseasons-images">
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+1+Image+1" alt="Season 1 Image 1">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+1+Image+2" alt="Season 1 Image 2">
+                    </div>
+                    <div class="wafaseasons-image">
+                        <img src="https://via.placeholder.com/360x240?text=Season+1+Image+3" alt="Season 1 Image 3">
+                    </div>
+                </div>
+            </div>
+            <div class="wafaseasons-download">
+                <a href="./brochure.pdf" download class="wafaseasons-btn wafaseasons-btn-download">Download Brochure</a>
             </div>
         </div>
     </section>
-</body>
-
-</html>
