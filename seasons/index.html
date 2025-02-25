@@ -189,21 +189,7 @@
 
 
 
-      <div class="kj_offer_sticky_bar">
-        <div class="news">
-          <ul>
-            <li class="list12">
-              Don't miss these dazzling <a href=""><button class="btn23">Limited Deals</button></a>
-            </li>
-            <li class="list13">
-              Sign up today <a href=""><button class="btn23">for exciting Gifts</button></a>
-            </li>
-            <li class="list13">
-              Essentials for your Life - <a href=""><button class="btn23">Get now!</button> </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      
       <div class="do-header-top">
         <div class="container">
           <div class="do-top-left float-left">
@@ -820,8 +806,59 @@
       </section>
 
     </div>
-    <br><br>
 
+
+
+    <style>
+
+      .wafaregister-button {
+          display: inline-block;
+          background-color: #25D366;
+          color: white;
+          padding: 15px 25px;
+          font-size: 18px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.3s, transform 0.2s;
+      }
+      .wafaregister-button:hover {
+          background-color: #1ebe5d;
+          transform: scale(1.05);
+      }
+      .wafaregister-button::before {
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          right: -3px;
+          bottom: -3px;
+          border-radius: 12px;
+          background: linear-gradient(45deg, red, blue, green, yellow, red);
+          background-size: 300% 300%;
+          animation: wafaregister-border-animation 4s linear infinite;
+          z-index: -1;
+      }
+      @keyframes wafaregister-border-animation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+  </style>
+<section class="wafaregister-section">
+  <div style="text-align: center; width: 100%;">
+      <a href="https://wa.me/9845119468?text=I%20would%20like%20to%20register%20now" class="wafaregister-button" target="_blank">
+          Register
+      </a>
+  </div>
+</section>
+
+<br><br>
     <footer id="footer" class="footer-section">
       <div class="container">
         <div class="footer-cta pt-5 pb-5">
