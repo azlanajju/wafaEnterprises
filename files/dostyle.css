@@ -747,7 +747,7 @@ header .do-main-menu .navbar-nav .do-brand-logo.do-brand-text {
   transition: 0.5s;
 }
 header.do-sticky {
-  height: 60px;
+  height: 60px !important;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -5319,7 +5319,7 @@ h2.do-subheading::after {
     height: 130px;
   }
   header.do-sticky {
-    height: 80px;
+    height: 60px;
   }
   header.do-sticky .navbar {
     padding-top: 0.5rem;
