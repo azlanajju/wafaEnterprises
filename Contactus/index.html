@@ -535,7 +535,7 @@
         }
       
         .btn {
-          background-color: #eec41c;
+          background-color: #ffffff;
           color: #000;
           font-weight: bold;
           border: none;
@@ -545,7 +545,7 @@
         }
       
         .btn:hover {
-          background-color: #d4aa00;
+          background-color: #c89b3c;
           color: #fff;
         }
       
@@ -575,7 +575,7 @@
         }
       
         .accordion-header:hover {
-          background: #eec41c;
+          background: #c89b3c;
           color: #fff;
         }
       
@@ -600,16 +600,25 @@
       </style>
       
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var accordionHeaders = document.querySelectorAll(".accordion-header");
-      
-          accordionHeaders.forEach(function (header) {
-            header.addEventListener("click", function () {
-              var parent = this.parentNode;
-              parent.classList.toggle("active");
+          document.addEventListener("DOMContentLoaded", function () {
+            var accordionHeaders = document.querySelectorAll(".accordion-header");
+
+            accordionHeaders.forEach(function (header) {
+              header.addEventListener("click", function () {
+                var parent = this.parentNode;
+                var allItems = document.querySelectorAll(".accordion-item");
+
+                allItems.forEach(function (item) {
+                  if (item !== parent) {
+                    item.classList.remove("active");
+                  }
+                });
+
+                parent.classList.toggle("active");
+              });
             });
           });
-        });
+
       </script>
       
       <section class="faq-contact-section">
@@ -634,15 +643,15 @@
       
           <!-- FAQ Section -->
           <div class="col">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title" style="margin: 30px 0;">Frequently Asked Questions</h2>
             <div class="accordion">
-              <div class="accordion-item">
+              <div class="accordion-item" style="margin: 15px 0;">
                 <button class="accordion-header">Is wafa Enterprises Genuine?</button>
                 <div class="accordion-body">
                   More than 35,000 people have trusted our organization over the past five years, and 2,500 families have benefited from life-changing prizes.
                 </div>
               </div>
-              <div class="accordion-item">
+              <div class="accordion-item" tyle="margin: 15px 0;">
                 <button class="accordion-header">How to join to New Season?</button>
                 <div class="accordion-body">
                   1. Provide your details, including your name, place, and contact number. <br>
@@ -650,7 +659,7 @@
                   3. Make your first installment payment.
                 </div>
               </div>
-              <div class="accordion-item">
+              <div class="accordion-item" tyle="margin: 15px 0;">
                 <button class="accordion-header">How often prizes are won?</button>
                 <div class="accordion-body">
                   Prizes are drawn every month and broadcast live on our YouTube channels.
