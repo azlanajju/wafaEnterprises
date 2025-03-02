@@ -1,36 +1,98 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Buttons</title>
+    <title>Seasons Showcase</title>
     <style>
-        .category {
-            display: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 5px;
+            background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .seasons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .season-card {
+            background: white;
+            border: 2px solid gold;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 250px;
+        }
+        .season-card:hover {
+            transform: translateY(-5px);
+        }
+        .season-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .season-date {
+            color: royalblue;
+            font-style: italic;
+        }
+        .view-more {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+        .view-more:hover {
+            background: black;
+            color: white;
         }
     </style>
 </head>
 <body>
-
-    <button onclick="showCategory('category1')">Category 1</button>
-    <button onclick="showCategory('category2')">Category 2</button>
-    <button onclick="showCategory('category3')">Category 3</button>
-
-    <div id="category1" class="category">Content for Category 1</div>
-    <div id="category2" class="category">Content for Category 2</div>
-    <div id="category3" class="category">Content for Category 3</div>
-
-    <script>
-        function showCategory(category) {
-            const categories = document.querySelectorAll('.category');
-            categories.forEach(cat => {
-                cat.style.display = 'none';
-            });
-            document.getElementById(category).style.display = 'block';
-        }
-    </script>
-
+    <h2 class="section-title">SEASONS</h2>
+    <div class="seasons-container">
+        <div class="season-card">
+            <div class="season-title">Season 4</div>
+            <div class="season-date">23rd Feb 2025</div>
+        </div>
+        <div class="season-card">
+            <div class="season-title">Season 5</div>
+            <div class="season-date">23rd Feb 2025</div>
+        </div>
+        <div class="season-card">
+            <div class="season-title">Season 6</div>
+            <div class="season-date">23rd Feb 2025</div>
+        </div>
+    </div>
+    <a href="#" class="view-more">View More</a>
 </body>
 </html>
