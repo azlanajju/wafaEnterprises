@@ -1,212 +1,149 @@
 
     <style>
 
-        /* Container */
-        .testimonial-container {
-            width: 100%;
-            max-width: 1300px;
-            margin: 50px auto;
-            padding: 60px 20px;
+        .organisations-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        /* Section Title */
-        .testimonial-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            color: #2c3e50;
-            margin-bottom: 50px;
+        .organisations-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
             position: relative;
         }
 
-        .testimonial-title::after {
+        .organisations-title::after {
             content: '';
-            position: absolute;
             width: 80px;
             height: 3px;
-            background: linear-gradient(to right, #e74c3c, #f39c12);
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            position: absolute;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 2px;
         }
 
-        /* Swiper Wrapper */
-        .wafatesti {
+        .organisations-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card-inner {
             width: 100%;
-            padding: 30px 0;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
         }
 
-        /* Swiper Slide (Card) */
-        .wafatesti .swiper-slide {
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-front {
             background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 20px; /* Reduced padding */
-            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 280px; /* Reduced height for compact layout */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(231, 76, 60, 0.1);
+            justify-content: space-between;
+            padding: 20px;
         }
 
-        .wafatesti .swiper-slide:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .card-back {
+            background: linear-gradient(135deg, #ffeb3b, #f39c12); /* Yellow gradient */
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333; /* Darker text for contrast */
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        /* Round Profile Image */
-        .wafatesti .profile-img {
-            width: 90px; /* Slightly smaller image */
-            height: 90px;
-            border-radius: 50%;
+        .card-img {
+            width: 100%;
+            height: 70%;
             object-fit: cover;
-            margin-bottom: 10px; /* Reduced margin */
-            border: 4px solid #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            border-radius: 10px 10px 0 0;
         }
 
-        .wafatesti .swiper-slide:hover .profile-img {
-            transform: scale(1.05);
-        }
-
-        /* Person's Name */
-        .wafatesti .person-name {
-            font-size: 18px;
+        .card-title {
+            font-size: 20px;
+            color: #333;
+            margin-top: 15px;
             font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px; /* Tight spacing */
         }
 
-        /* Small Text (e.g., Job Title) */
-        .wafatesti .small-text {
-            font-size: 14px;
-            color: #e74c3c;
-            margin-bottom: 10px; /* Tight spacing */
-        }
-
-        /* Testimonial Text */
-        .wafatesti .testimonial-text {
-            font-size: 15px; /* Slightly smaller for compactness */
-            color: #7f8c8d;
-            line-height: 1.5;
-            max-width: 300px;
-            font-weight: 300;
-        }
-
-        /* Pagination Bullets */
-        .wafatesti .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: #dcdcdc;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .wafatesti .swiper-pagination-bullet-active {
-            background: #e74c3c;
-            width: 14px;
-            height: 14px;
-            opacity: 1;
-        }
-
-
-
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
-            .testimonial-title {
-                font-size: 32px;
+            .organisations-cards {
+                flex-direction: column;
+                align-items: center;
             }
-            .wafatesti .swiper-slide {
-                height: 320px; /* Slightly taller for smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .testimonial-title {
-                font-size: 28px;
-            }
-            .wafatesti .swiper-slide {
-                height: 340px;
+            .card {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 
-
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-container">
-        <h2 class="testimonial-title">Our Happy Clients</h2>
-        <div class="swiper wafatesti">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Profile" class="profile-img">
-                    <h3 class="person-name">Sarah Johnson</h3>
-                    <p class="small-text">Entrepreneur</p>
-                    <p class="testimonial-text">"This service transformed my business with unmatched creativity!"</p>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Profile" class="profile-img">
-                    <h3 class="person-name">Mark Davis</h3>
-                    <p class="small-text">Freelancer</p>
-                    <p class="testimonial-text">"My online presence soared thanks to their expertise."</p>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Profile" class="profile-img">
-                    <h3 class="person-name">Emily Carter</h3>
-                    <p class="small-text">Designer</p>
-                    <p class="testimonial-text">"They crafted a brand identity I’m truly proud of."</p>
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Profile" class="profile-img">
-                    <h3 class="person-name">James Lee</h3>
-                    <p class="small-text">Developer</p>
-                    <p class="testimonial-text">"Exceeded my expectations with stunning results!"</p>
-                </div>
-                <!-- Slide 5 -->
-                <div class="swiper-slide">
-                    <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Profile" class="profile-img">
-                    <h3 class="person-name">Lisa Brown</h3>
-                    <p class="small-text">Marketer</p>
-                    <p class="testimonial-text">"Huge boost in engagement within weeks!"</p>
+    <section class="organisations-section">
+        <h2 class="organisations-title">Our Organisations</h2>
+        <div class="organisations-cards">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://via.placeholder.com/300x280?text=Wafa+Furnitures" alt="Wafa Furnitures" class="card-img">
+                        <h3 class="card-title">Wafa Furnitures</h3>
+                    </div>
+                    <div class="card-back">
+                        Coming Soon
+                    </div>
                 </div>
             </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://via.placeholder.com/300x280?text=Wafa+Gold+and+Diamonds" alt="Wafa Gold and Diamonds" class="card-img">
+                        <h3 class="card-title">Wafa Gold and Diamonds</h3>
+                    </div>
+                    <div class="card-back">
+                        Coming Soon
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://via.placeholder.com/300x280?text=Wafa+Real+Estate" alt="Wafa Real Estate" class="card-img">
+                        <h3 class="card-title">Wafa Real Estate</h3>
+                    </div>
+                    <div class="card-back">
+                        Coming Soon
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Swiper JS from CDN -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Swiper Initialization -->
-    <script>
-        var swiper = new Swiper(".wafatesti", {
-            slidesPerView: 3,           // Show 3 cards at a time
-            spaceBetween: 30,          // Space between cards
-            loop: true,                // Enable infinite looping
-            speed: 1000,               // Smooth transition speed
-            autoplay: {
-                delay: 10000,          // 10 seconds delay
-                disableOnInteraction: false // Keep autoplay after interaction
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true         // Clickable pagination
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2      // 2 cards on medium screens
-                },
-                480: {
-                    slidesPerView: 1      // 1 card on small screens
-                }
-            }
-        });
-    </script>
