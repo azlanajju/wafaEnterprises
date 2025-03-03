@@ -643,7 +643,7 @@
           }
 
 
-
+          
           /* Responsive Design */
           @media (max-width: 1024px) {
             .wafaabout-container {
@@ -719,109 +719,86 @@
               </div>
             </div>
           </div>
-          <div class="wafaabout-column">
-            <h2 data-aos-delay="100" data-aos="fade-up">WAFA FURNITURES</h2>
-            <p data-aos-delay="150" data-aos="fade-up">We aim to empower businesses by providing tailored strategies and
-              cutting-edge technology, fostering growth and sustainability in an ever-evolving market.</p>
-            <img src="./Images/71u3F2NZ9gL.jpg" alt="Wafa Furnitures" class="wafaabout-img" data-aos-delay="200"
-              data-aos="fade-up">
+          <div class="wafaabout-bottom-section">
+            <div class="wafaabout-column">
+              <h2 data-aos-delay="100" data-aos="fade-up">WAFA FURNITURES</h2>
+              <p data-aos-delay="150" data-aos="fade-up">We aim to empower businesses by providing tailored strategies and cutting-edge technology, fostering growth and sustainability in an ever-evolving market.</p>
+              <img src="./Images/71u3F2NZ9gL.jpg" alt="Wafa Furnitures" class="wafaabout-img" data-aos-delay="200" data-aos="fade-up">
+            </div>
+            <div class="wafaabout-column">
+              <h2 data-aos-delay="100" data-aos="fade-up">WAFA BUILDERS AND DEVELOPERS</h2>
+              <p data-aos-delay="150" data-aos="fade-up">Integrity, collaboration, and innovation are at the core of everything we do. We believe in building trust through transparency and dedication.</p>
+              <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Builders" class="wafaabout-img" data-aos-delay="200" data-aos="fade-up">
+            </div>
           </div>
-          <div class="wafaabout-column">
-            <h2 data-aos-delay="100" data-aos="fade-up">WAFA BUILDERS AND DEVELOPERS</h2>
-            <p data-aos-delay="150" data-aos="fade-up">Integrity, collaboration, and innovation are at the core of
-              everything we do. We believe in building trust through transparency and dedication.</p>
-            <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Builders" class="wafaabout-img"
-              data-aos-delay="200" data-aos="fade-up">
-          </div>
-
+          
           <style>
             .wafaabout-bottom-section {
               display: flex;
               justify-content: space-between;
               gap: 40px;
-              padding: 40px;
-              /* Added padding for better spacing */
-              background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-              /* Subtle gradient background */
-              border-radius: 12px;
-              /* Rounded corners for section */
-              max-width: 1200px;
-              /* Constrain width */
-              margin: 0 auto;
-              /* Center section */
+              padding: 40px; /* Added padding for better spacing */
+              background: linear-gradient(135deg, #f8fafc, #e2e8f0); /* Subtle gradient background */
+              border-radius: 12px; /* Rounded corners for section */
+              max-width: 1200px; /* Constrain width */
+              margin: 0 auto; /* Center section */
             }
-
+          
             .wafaabout-column {
               flex: 1;
-              border-radius: 10px;
-              /* Softer corners */
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              /* Smooth hover effect */
+              padding: 25px; /* Slightly increased padding */
+              background-color: #ffffff; /* Pure white for contrast */
+              border-radius: 10px; /* Softer corners */
+              box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Deeper shadow for depth */
+              transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
             }
-
+          
             .wafaabout-column:hover {
-              transform: translateY(-5px);
-              /* Slight lift on hover */
-              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-              /* Enhanced shadow on hover */
+              transform: translateY(-5px); /* Slight lift on hover */
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
             }
-
+          
             .wafaabout-column h2 {
-              font-size: 1.9rem;
-              /* Slightly larger for emphasis */
-              font-weight: 700;
-              /* Bolder text */
+              font-size: 1.9rem; /* Slightly larger for emphasis */
+              font-weight: 700; /* Bolder text */
               color: #1a202c;
               margin-bottom: 16px;
-              border-bottom: 3px solid #EDB70F;
-              /* Blue border for vibrancy */
+              border-bottom: 3px solid #EDB70F; /* Blue border for vibrancy */
               padding-bottom: 10px;
             }
-
+          
             .wafaabout-column p {
               font-size: 1rem;
               color: #4a5568;
               line-height: 1.7;
               text-align: justify;
-              margin-bottom: 20px;
-              /* Space before image */
+              margin-bottom: 20px; /* Space before image */
             }
-
+          
             .wafaabout-img {
-              width: 300px;
-              /* Fixed width */
-              height: 200px;
-              /* Fixed height */
-              border-radius: 8px;
-              /* Rounded corners */
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-              /* Subtle shadow */
-              display: block;
-              /* Ensure it’s a block element */
-              margin: 0 auto;
-              /* Center image horizontally */
-              object-fit: cover;
-              /* Ensures image fills the space without distortion */
-            }
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: block; /* Ensure it’s a block element */
+    margin: 0 auto; /* Center image horizontally */
+    object-fit: cover; /* Ensures image fills the space without distortion */
+}
 
-            @media (max-width: 768px) {
-              .wafaabout-img {
-                width: 100%;
-                /* Full width on mobile */
-                height: 150px;
-                /* Reduced height for better mobile fit */
-              }
-            }
-
+@media (max-width: 768px) {
+  .wafaabout-img {
+    width: 100%; /* Full width on mobile */
+    height: 150px; /* Reduced height for better mobile fit */
+  }
+}
+          
             @media (max-width: 768px) {
               .wafaabout-bottom-section {
                 flex-direction: column;
-                gap: 30px;
-                /* Increased gap for mobile */
-                padding: 20px;
-                /* Reduced padding for smaller screens */
+                gap: 30px; /* Increased gap for mobile */
+                padding: 20px; /* Reduced padding for smaller screens */
               }
-
+          
               .wafaabout-column {
                 padding: 20px;
               }
@@ -1495,14 +1472,12 @@
                   flex-wrap: wrap;
                   margin-top: 30px;
                 }
-
+            
                 .season-card-link {
-                  text-decoration: none;
-                  /* Removes underline from link */
-                  color: inherit;
-                  /* Inherits text color from parent */
+                  text-decoration: none; /* Removes underline from link */
+                  color: inherit; /* Inherits text color from parent */
                 }
-
+            
                 .season-card {
                   background: white;
                   border-radius: 15px;
@@ -1512,191 +1487,193 @@
                   width: 280px;
                   text-align: center;
                   border-bottom: 5px solid #f6e27a;
-                  cursor: pointer;
-                  /* Indicates the card is clickable */
+                  cursor: pointer; /* Indicates the card is clickable */
                 }
-
+            
                 .season-card:hover {
                   transform: translateY(-8px);
                   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
                 }
-
+            
                 .season-title {
                   font-size: 1.6rem;
                   font-weight: bold;
                   color: #333;
                   margin-bottom: 5px;
                 }
-
+            
                 .season-date {
                   color: #333;
                   font-style: italic;
                 }
               </style>
             </div>
-            <div data-aos-delay="100" data-aos="fade-up" class="wafafounder-view-more">
-              <a href="./seasons/">View More</a>
+              <div data-aos-delay="100" data-aos="fade-up" class="wafafounder-view-more">
+                <a href="./seasons/">View More</a>
+              </div>
             </div>
-          </div>
 
 
 
-          <style>
-            .organisations-section {
-              max-width: 1200px;
-              margin: 0 auto;
-              padding: 40px 20px;
-              text-align: center;
-            }
+            <style>
+              .organisations-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                text-align: center;
+              }
 
-            .organisations-title {
-              font-size: 36px;
-              color: #333;
-              margin-bottom: 40px;
-              position: relative;
-            }
+              .organisations-title {
+                font-size: 36px;
+                color: #333;
+                margin-bottom: 40px;
+                position: relative;
+              }
 
-            .organisations-title::after {
-              content: '';
-              width: 80px;
-              height: 3px;
-              background: linear-gradient(to right, #3498db, #2ecc71);
-              position: absolute;
-              bottom: -10px;
-              left: 50%;
-              transform: translateX(-50%);
-            }
+              .organisations-title::after {
+                content: '';
+                width: 80px;
+                height: 3px;
+                background: linear-gradient(to right, #3498db, #2ecc71);
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
 
-            .organisations-cards {
-              display: flex;
-              justify-content: center;
-              gap: 30px;
-              flex-wrap: wrap;
-            }
-
-            .card {
-              width: 300px;
-              height: 400px;
-              position: relative;
-              perspective: 1000px;
-            }
-
-            .card-inner {
-              width: 100%;
-              height: 100%;
-              position: relative;
-              transform-style: preserve-3d;
-              transition: transform 0.6s ease;
-            }
-
-            .card:hover .card-inner {
-              transform: rotateY(180deg);
-            }
-
-            .card-front,
-            .card-back {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
-            }
-
-            .card-front {
-              background: #fff;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-              padding: 20px;
-            }
-
-            .card-back {
-              background: linear-gradient(135deg, #ffeb3b, #f39c12);
-              /* Yellow gradient */
-              transform: rotateY(180deg);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: #333;
-              /* Darker text for contrast */
-              font-size: 24px;
-              font-weight: bold;
-              text-transform: uppercase;
-            }
-
-            .card-img {
-              width: 100%;
-              height: 70%;
-              object-fit: cover;
-              border-radius: 10px 10px 0 0;
-            }
-
-            .card-title {
-              font-size: 20px;
-              color: #333;
-              margin-top: 15px;
-              font-weight: 600;
-            }
-
-            @media (max-width: 768px) {
               .organisations-cards {
-                flex-direction: column;
-                align-items: center;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
               }
 
               .card {
-                width: 100%;
-                max-width: 300px;
+                width: 300px;
+                height: 400px;
+                position: relative;
+                perspective: 1000px;
               }
-            }
-          </style>
 
-          <section class="organisations-section">
-            <h2 class="wafafounder-seasons-title" data-aos-delay="100" data-aos="fade-up">OUR ORGANISATIONS</h2>
-            <div class="organisations-cards">
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="./Images/71u3F2NZ9gL.jpg" alt="Wafa Furnitures" class="card-img">
-                    <h3 class="card-title">Wafa Furnitures</h3>
+              .card-inner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 0.6s ease;
+              }
+
+              .card:hover .card-inner {
+                transform: rotateY(180deg);
+              }
+
+              .card-front,
+              .card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+              }
+
+              .card-front {
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+              }
+
+              .card-back {
+                background: linear-gradient(135deg, #ffeb3b, #f39c12);
+                /* Yellow gradient */
+                transform: rotateY(180deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333;
+                /* Darker text for contrast */
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+
+              .card-img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+              }
+
+              .card-title {
+                font-size: 20px;
+                color: #333;
+                margin-top: 15px;
+                font-weight: 600;
+              }
+
+              @media (max-width: 768px) {
+                .organisations-cards {
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .card {
+                  width: 100%;
+                  max-width: 300px;
+                }
+              }
+            </style>
+
+            <section class="organisations-section">
+              <h2 class="wafafounder-seasons-title" data-aos-delay="100" data-aos="fade-up">OUR ORGANISATIONS</h2>
+              <div class="organisations-cards">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="./Images/71u3F2NZ9gL.jpg" alt="Wafa Furnitures"
+                        class="card-img">
+                      <h3 class="card-title">Wafa Furnitures</h3>
+                    </div>
+                    <div class="card-back">
+                      <a href="" style="color: #000;"></a> View More</a>
+                    </div>
                   </div>
-                  <div class="card-back">
-                    <a href="" style="color: #000;"></a> View More</a>
+                </div>
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="./Images/product-jpeg.jpg"
+                        alt="Wafa Gold and Diamonds" class="card-img">
+                      <h3 class="card-title">Wafa Gold and Diamonds</h3>
+                    </div>
+                    <div class="card-back">
+                      Coming Soon
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Real Estate"
+                        class="card-img">
+                      <h3 class="card-title">Wafa Real Estate</h3>
+                    </div>
+                    <div class="card-back">
+                      Coming Soon
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="./Images/product-jpeg.jpg" alt="Wafa Gold and Diamonds" class="card-img">
-                    <h3 class="card-title">Wafa Gold and Diamonds</h3>
-                  </div>
-                  <div class="card-back">
-                    Coming Soon
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Real Estate" class="card-img">
-                    <h3 class="card-title">Wafa Real Estate</h3>
-                  </div>
-                  <div class="card-back">
-                    Coming Soon
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            </section>
 
-      </div>
-      </section>
+          </div>
+        </section>
 
-      <!-- <section id="seasons">
+        <!-- <section id="seasons">
           <div class="row">
             <div class="col-lg-12">
               <div class="">
@@ -1737,266 +1714,266 @@
             </div>
           </div>
         </section> -->
-    </div>
-  </div>
-
-
-
-
-
-
-  <style>
-    .wafaregister-button {
-      display: inline-block;
-      background: white;
-      color: black;
-      padding: 15px 25px;
-      font-size: 18px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .wafaregister-button:hover {
-      background-color: #fff;
-      transform: scale(1.05);
-      color: #000;
-      text-decoration: none;
-    }
-
-    .wafaregister-button::before {
-      content: "";
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      right: -3px;
-      bottom: -3px;
-      border-radius: 12px;
-      background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
-      background-size: 300% 300%;
-      animation: wafaregister-border-animation 4s linear infinite;
-      z-index: -1;
-      color: black;
-    }
-
-    @keyframes wafaregister-border-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
-
-
-  <section class="wafaregister-section">
-    <div data-aos-delay="100" data-aos="fade-up" style="text-align: center; width: 100%;">
-      <a href="https://wa.me/9845119468?text=I%20would%20like%20to%20register%20now" class="wafaregister-button"
-        target="_blank">
-        Register
-      </a>
-    </div>
-  </section>
-
-  <br><br>
-
-
-  <footer data-aos-delay="100" data-aos="fade-up" id="footer" class="footer-section">
-    <div class="container">
-      <div class="footer-cta pt-5 pb-5">
-        <div class="row">
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="cta-text">
-                <h4>Find us</h4>
-                <span>P H Apartment, Tippu nagara, jokatte</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="fas fa-phone"></i>
-              <div class="cta-text">
-                <h4>Call us</h4>
-                <span>9901068874</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-4 mb-30">
-            <div class="single-cta">
-              <i class="far fa-envelope-open"></i>
-              <div class="cta-text">
-                <h4>Mail us</h4>
-                <span>we.wafafurnitures@gmail.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-content pt-5 pb-5">
-        <div class="row">
-          <div class="col-xl-4 col-lg-4 mb-50">
-            <div class="footer-widget">
-              <div class="footer-logo">
-                <a href="index.html"><img src="./Images/WAFA_logo.png" class="img-fluid" alt="logo"></a>
-              </div>
-              <div class="footer-text">
-                <p>Wafa Enterprises is a gold investment scheme and lucky draw business operating in Dakshina Kannada
-                  and Udupi districts, catering to the needs of the youth and families.</p>
-              </div>
-              <div class="footer-social-icon">
-                <span>Follow us</span>
-                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3>Useful Links</h3>
-              </div>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Expert Team</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Latest News</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-            <div class="footer-widget">
-              <div class="footer-widget-heading">
-                <h3>Subscribe</h3>
-              </div>
-              <div class="footer-text mb-25">
-                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-              </div>
-              <div class="subscribe-form">
-                <form action="#">
-                  <input type="text" placeholder="Email Address">
-                  <button><i class="fab fa-telegram-plane"></i></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="copyright-area">
+
+
+
+
+
+
+    <style>
+      .wafaregister-button {
+        display: inline-block;
+        background: white;
+        color: black;
+        padding: 15px 25px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .wafaregister-button:hover {
+        background-color: #fff;
+        transform: scale(1.05);
+        color: #000;
+        text-decoration: none;
+      }
+
+      .wafaregister-button::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 12px;
+        background-image: linear-gradient(45deg, #f6e27a 0, #cb9b51 22%, #f6e27a 45%, #f6e27a 50%, #f6e27a 55%, #cb9b51 78%, #d3b107 100%);
+        background-size: 300% 300%;
+        animation: wafaregister-border-animation 4s linear infinite;
+        z-index: -1;
+        color: black;
+      }
+
+      @keyframes wafaregister-border-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+
+
+    <section class="wafaregister-section">
+      <div data-aos-delay="100" data-aos="fade-up" style="text-align: center; width: 100%;">
+        <a href="https://wa.me/9845119468?text=I%20would%20like%20to%20register%20now" class="wafaregister-button"
+          target="_blank">
+          Register
+        </a>
+      </div>
+    </section>
+
+    <br><br>
+
+
+    <footer data-aos-delay="100" data-aos="fade-up" id="footer" class="footer-section">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-            <div class="copyright-text">
-              <p>Copyright &copy; 2025, All Right Reserved <a href="https://intelexsolutions.in/">Intelex
-                  Solutions</a></p>
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span>P H Apartment, Tippu nagara, jokatte</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span>9901068874</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span>we.wafafurnitures@gmail.com</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Policy</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html"><img src="./Images/WAFA_logo.png" class="img-fluid" alt="logo"></a>
+                </div>
+                <div class="footer-text">
+                  <p>Wafa Enterprises is a gold investment scheme and lucky draw business operating in Dakshina Kannada
+                    and Udupi districts, catering to the needs of the youth and families.</p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow us</span>
+                  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Expert Team</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Latest News</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Subscribe</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address">
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>Copyright &copy; 2025, All Right Reserved <a href="https://intelexsolutions.in/">Intelex
+                    Solutions</a></p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
-  <style>
-    .do-blog-posts {
-      display: none;
-    }
+    <style>
+      .do-blog-posts {
+        display: none;
+      }
 
-    .cairoArabic {
-      font-family: "GESS", sans-serif;
-      direction: rtl;
-    }
+      .cairoArabic {
+        font-family: "GESS", sans-serif;
+        direction: rtl;
+      }
 
-    #expand_rates_modal .caret label,
-    #expand_rates_modal .caret {
-      font-size: 50px;
-      font-weight: bold;
-      display: inline-block;
-    }
+      #expand_rates_modal .caret label,
+      #expand_rates_modal .caret {
+        font-size: 50px;
+        font-weight: bold;
+        display: inline-block;
+      }
 
-    #expand_rates_modal .modalClass {
-      display: block;
-      margin-bottom: 10px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-      width: 100%;
-    }
+      #expand_rates_modal .modalClass {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        width: 100%;
+      }
 
-    #expand_rates_modal .tableRates {
-      border: 1px solid;
-      text-align: center;
-    }
+      #expand_rates_modal .tableRates {
+        border: 1px solid;
+        text-align: center;
+      }
 
-    #expand_rates_modal .col-lg-8 {
-      -ms-flex: 0 0 80%;
-      flex: 0 0 80%;
-      max-width: 80%;
-    }
+      #expand_rates_modal .col-lg-8 {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+      }
 
-    #expand_rates_modal .caret {
-      margin-right: 25px;
-    }
+      #expand_rates_modal .caret {
+        margin-right: 25px;
+      }
 
-    #expand_rates_modal {
-      padding: 0px !important;
-    }
+      #expand_rates_modal {
+        padding: 0px !important;
+      }
 
-    #expand_rates_modal .modal-lg {
-      max-width: 100%;
-      margin: 0px;
-    }
+      #expand_rates_modal .modal-lg {
+        max-width: 100%;
+        margin: 0px;
+      }
 
-    #expand_rates_modal .modal-body {
-      padding: 0px;
-    }
-  </style>
-  <noscript>
-    <link href="https://wafaenterprises.in/css/plugins-css.css" rel="stylesheet" />
-  </noscript>
+      #expand_rates_modal .modal-body {
+        padding: 0px;
+      }
+    </style>
+    <noscript>
+      <link href="https://wafaenterprises.in/css/plugins-css.css" rel="stylesheet" />
+    </noscript>
 
-  <script>
-    $.ajax({
-      url: "https://wafaenterprises.in/blog/wp-json/wp/v2/posts?_embed&per_page=3&orderby=date&order=desc",
-      success: function (data) {
-        // Clear previous content in case of any
-        $("#leftsection, #rightsection-1, #rightsection-2").empty();
+    <script>
+      $.ajax({
+        url: "https://wafaenterprises.in/blog/wp-json/wp/v2/posts?_embed&per_page=3&orderby=date&order=desc",
+        success: function (data) {
+          // Clear previous content in case of any
+          $("#leftsection, #rightsection-1, #rightsection-2").empty();
 
-        // Create post template
-        let postTemplate = function (post) {
-          return ` 
+          // Create post template
+          let postTemplate = function (post) {
+            return ` 
               <a class="read-more" href="${post.link}">
                 <h3>${post.title.rendered}</h3>
               </a>
@@ -2005,597 +1982,597 @@
                 <a class="read-more text-danger" href="${post.link}">read more</a>
               </div>
           `;
-        };
+          };
 
-        // Append posts to respective sections
-        $("#leftsection").append(postTemplate(data[0]));
-        $("#rightsection-1").append(postTemplate(data[1]));
-        $("#rightsection-2").append(postTemplate(data[2]));
+          // Append posts to respective sections
+          $("#leftsection").append(postTemplate(data[0]));
+          $("#rightsection-1").append(postTemplate(data[1]));
+          $("#rightsection-2").append(postTemplate(data[2]));
 
-        // Show the blog posts section once data is loaded
-        $(".do-blog-posts").show();
-      },
-      error: function () {
-        console.log("Error loading posts.");
-      },
-    });
-  </script>
-
-  <script type="text/javascript">
-    var giftofspeed4 = document.createElement("link");
-    giftofspeed4.rel = "stylesheet";
-    giftofspeed4.href = "https://wafaenterprises.in/css/plugins-css.css";
-    giftofspeed4.type = "text/css";
-    var godefer4 = document.getElementsByTagName("link")[0];
-    godefer4.parentNode.insertBefore(giftofspeed4, godefer4);
-  </script>
-
-  <script src="./files/bootstrap.popper.min.js.download"></script>
-  <script src="./files/plugins-js.js.download"></script>
-  <script src="./files/modernizr.custom.js.download"></script>
-  <script src="./files/main-min.js.download"></script>
-  <script src="./files/closest.js.download"></script>
-  <script src="./files/blazy.min.js.download"></script>
-  <script>
-    (function () {
-      // Initialize
-      var bLazy = new Blazy({
-        loadInvisible: true,
-        offset: 100,
+          // Show the blog posts section once data is loaded
+          $(".do-blog-posts").show();
+        },
+        error: function () {
+          console.log("Error loading posts.");
+        },
       });
-    })();
-    $(function () {
-      $(".do-grid-showcase .do-showcase-info .btn.clone-btn, .do-grid-showcase .do-showcase-info .btn").attr("href", function (i, h) {
-        return h + (h.indexOf("?") != -1 ? "&utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=Tiles" : "?utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=Tiles");
-      });
+    </script>
 
-      $(".btn.btn-lg.btn-outline-dark.mt-3.clone-btn,btn.btn-lg.btn-outline-dark.mt-3").attr("href", function (i, h) {
-        return h + (h.indexOf("?") != -1 ? "&utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=ShopOnlineOnPage" : "?utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=ShopOnlineOnPage");
-      });
-    });
-  </script>
+    <script type="text/javascript">
+      var giftofspeed4 = document.createElement("link");
+      giftofspeed4.rel = "stylesheet";
+      giftofspeed4.href = "https://wafaenterprises.in/css/plugins-css.css";
+      giftofspeed4.type = "text/css";
+      var godefer4 = document.getElementsByTagName("link")[0];
+      godefer4.parentNode.insertBefore(giftofspeed4, godefer4);
+    </script>
 
-  <style>
-    #book_modal .do-fdb-mdl .form-control {
-      border: 1px solid;
-      border-color: aliceblue;
-    }
-
-    #book-status {
-      font-weight: bold;
-      padding: 10px 0px;
-      color: red;
-    }
-  </style>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if ($(".nwYr").length > 0) {
-        (function ($) {
-          //
-          // Zachary Johnson
-          // https://www.zachstronaut.com/posts/2009/12/21/happy-xmas-winternet.html
-          // December 2009
-          //
-
-          var ww = 0;
-          var wh = 0;
-          var maxw = 0;
-          var minw = 0;
-          var maxh = 0;
-          var textShadowSupport = true;
-          var xv = 0;
-          var snowflakes = ["\u2744", "\u2745", "\u2746"];
-          var prevTime;
-          var absMax = 10;
-          var flakeCount = 0;
-
-          $(init);
-
-          function init() {
-            var detectSize = function () {
-              ww = $(window).width();
-              wh = $(window).height();
-
-              maxw = ww + 300;
-              minw = -300;
-              maxh = wh + 300;
-            };
-
-            detectSize();
-
-            $(window).resize(detectSize);
-
-            if (!$("body").css("textShadow")) {
-              textShadowSupport = false;
-            }
-
-            /* Should work in Windows 7 /*
-    if (/windows/i.test(navigator.userAgent))
-    {
-        snowflakes = ['*']; // Windows sucks and doesn't have Unicode chars installed
-        //snowflakes = ['T']; //No FF support for Wingdings
-    }
-    */
-
-            // FF seems to just be able to handle like 50... 25 with rotation
-            // Safari seems fine with 150+... 75 with rotation
-            var i = 10;
-            while (i--) {
-              addFlake(true);
-            }
-
-            prevTime = new Date().getTime();
-            setInterval(move, 50);
-          }
-
-          function addFlake(initial) {
-            flakeCount++;
-
-            var sizes = [
-              {
-                r: 1.0,
-                css: {
-                  fontSize: 15 + Math.floor(Math.random() * 20) + "px",
-                  textShadow: "9999px 0 0 rgba(238, 238, 238, 0.5)",
-                },
-                v: 2,
-              },
-              {
-                r: 0.6,
-                css: {
-                  fontSize: 50 + Math.floor(Math.random() * 20) + "px",
-                  textShadow: "9999px 0 2px #eee",
-                },
-                v: 6,
-              },
-              {
-                r: 0.2,
-                css: {
-                  fontSize: 90 + Math.floor(Math.random() * 30) + "px",
-                  textShadow: "9999px 0 6px #eee",
-                },
-                v: 12,
-              },
-              {
-                r: 0.1,
-                css: {
-                  fontSize: 150 + Math.floor(Math.random() * 50) + "px",
-                  textShadow: "9999px 0 24px #eee",
-                },
-                v: 20,
-              },
-            ];
-
-            var $nowflake = $('<span class="winternetz">' + snowflakes[Math.floor(Math.random() * snowflakes.length)] + "</span>").css({
-              /*fontFamily: 'Wingdings',*/
-              color: "#eee",
-              display: "block",
-              position: "fixed",
-              background: "transparent",
-              width: "auto",
-              height: "auto",
-              margin: "0",
-              padding: "0",
-              textAlign: "left",
-              zIndex: 9999,
-            });
-
-            if (textShadowSupport) {
-              $nowflake.css("textIndent", "-9999px");
-            }
-
-            var r = Math.random();
-
-            var i = sizes.length;
-
-            var v = 0;
-
-            while (i--) {
-              if (r < sizes[i].r) {
-                v = sizes[i].v;
-                $nowflake.css(sizes[i].css);
-                break;
-              }
-            }
-
-            var x = -300 + Math.floor(Math.random() * (ww + 300));
-
-            var y = 0;
-            if (typeof initial == "undefined" || !initial) {
-              y = -300;
-            } else {
-              y = -300 + Math.floor(Math.random() * (wh + 300));
-            }
-
-            $nowflake.css({
-              left: x + "px",
-              top: y + "px",
-            });
-
-            $nowflake.data("x", x);
-            $nowflake.data("y", y);
-            $nowflake.data("v", v);
-            $nowflake.data("half_v", Math.round(v * 0.5));
-
-            $("body").append($nowflake);
-          }
-
-          function move() {
-            if (Math.random() > 0.8) {
-              xv += -1 + Math.random() * 2;
-
-              if (Math.abs(xv) > 3) {
-                xv = 3 * (xv / Math.abs(xv));
-              }
-            }
-
-            // Throttle code
-            var newTime = new Date().getTime();
-            var diffTime = newTime - prevTime;
-            prevTime = newTime;
-
-            if (diffTime < 55 && flakeCount < absMax) {
-              addFlake();
-            } else if (diffTime > 150) {
-              $("span.winternetz:first").remove();
-              flakeCount--;
-            }
-
-            $("span.winternetz").each(function () {
-              var x = $(this).data("x");
-              var y = $(this).data("y");
-              var v = $(this).data("v");
-              var half_v = $(this).data("half_v");
-
-              y += v;
-
-              x += Math.round(xv * v);
-              x += -half_v + Math.round(Math.random() * v);
-
-              // because flakes are rotating, the origin could be +/- the size of the flake offset
-              if (x > maxw) {
-                x = -300;
-              } else if (x < minw) {
-                x = ww;
-              }
-
-              if (y > maxh) {
-                $(this).remove();
-                flakeCount--;
-
-                addFlake();
-              } else {
-                $(this).data("x", x);
-                $(this).data("y", y);
-
-                $(this).css({
-                  left: x + "px",
-                  top: y + "px",
-                });
-
-                // only spin biggest three flake sizes
-                if (v >= 6) {
-                  $(this).animate({ rotate: "+=" + half_v + "deg" }, 0);
-                }
-              }
-            });
-          }
-        })(jQuery);
-      }
-
+    <script src="./files/bootstrap.popper.min.js.download"></script>
+    <script src="./files/plugins-js.js.download"></script>
+    <script src="./files/modernizr.custom.js.download"></script>
+    <script src="./files/main-min.js.download"></script>
+    <script src="./files/closest.js.download"></script>
+    <script src="./files/blazy.min.js.download"></script>
+    <script>
+      (function () {
+        // Initialize
+        var bLazy = new Blazy({
+          loadInvisible: true,
+          offset: 100,
+        });
+      })();
       $(function () {
-        $("#book_date").datepicker({});
+        $(".do-grid-showcase .do-showcase-info .btn.clone-btn, .do-grid-showcase .do-showcase-info .btn").attr("href", function (i, h) {
+          return h + (h.indexOf("?") != -1 ? "&utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=Tiles" : "?utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=Tiles");
+        });
+
+        $(".btn.btn-lg.btn-outline-dark.mt-3.clone-btn,btn.btn-lg.btn-outline-dark.mt-3").attr("href", function (i, h) {
+          return h + (h.indexOf("?") != -1 ? "&utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=ShopOnlineOnPage" : "?utm_source=KJOfficial&utm_medium=KJWebsite&utm_campaign=ShopOnlineOnPage");
+        });
       });
-    });
+    </script>
 
-    $(window).load(function () {
-      //$('#book_date').datetimepicker();
-
-      $(document).on("click", ".expandRates", function () {
-        //alert('asdf');
-        $("#expand_rates_modal").modal("toggle");
-        //$('.place_h5 strong').html($('.rate_price_how h4').html());
-        $(".tableRates").html($(".priceBlock").html());
-      });
-
-      $(".bookMe").click(function () {
-        var location_name = $(this).data("location");
-        $("#location_name").val(location_name);
-        $("#book_modal").modal("toggle");
-      });
-
-      if ($("#RateBlock").length > 0) {
-        //$('#rates_modal').modal('show');
+    <style>
+      #book_modal .do-fdb-mdl .form-control {
+        border: 1px solid;
+        border-color: aliceblue;
       }
 
-      // if($.cookie('fraudCookie2')) {
-      // 	}
-      // 	else
-      // 	{
-      // 		var cookie_value=Math.floor(Math.random() * 26) + Date.now();
-      // 		//alert(cookie_value);
-      // 		$.cookie( 'fraudCookie2', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
-      // 		$('#fraud_campaign_modal').modal('show');
-      // 	}
+      #book-status {
+        font-weight: bold;
+        padding: 10px 0px;
+        color: red;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if ($(".nwYr").length > 0) {
+          (function ($) {
+            //
+            // Zachary Johnson
+            // https://www.zachstronaut.com/posts/2009/12/21/happy-xmas-winternet.html
+            // December 2009
+            //
 
-      $("#book_submit").click(function (e) {
-        e.preventDefault();
-        var book_name = $("#book_name").val();
-        var book_mobile = $("#book_mobile").val();
-        var book_email = $("#book_email").val();
-        var book_date = $("#book_date").val();
-        var book_full = $("#book_full").val();
-        var location_name = $("#location_name").val();
+            var ww = 0;
+            var wh = 0;
+            var maxw = 0;
+            var minw = 0;
+            var maxh = 0;
+            var textShadowSupport = true;
+            var xv = 0;
+            var snowflakes = ["\u2744", "\u2745", "\u2746"];
+            var prevTime;
+            var absMax = 10;
+            var flakeCount = 0;
 
-        $("#book-status").remove();
+            $(init);
 
-        if (book_name != "" && book_mobile != "" && book_email != "" && book_date != "") {
-          $.ajax({
-            url: "https://wafaenterprises.in/book_appointment",
-            type: "POST",
-            data: { book_name: book_name, book_mobile: book_mobile, book_email: book_email, book_date: book_date, book_full: book_full, location_name: location_name },
-            success: function (data) {
-              $('<div id="book-status">' + data + "</div>").insertAfter("#book_modal .do-mdl-form h5");
+            function init() {
+              var detectSize = function () {
+                ww = $(window).width();
+                wh = $(window).height();
 
-              setTimeout(function () {
-                $("#book_modal").modal("toggle");
-              }, 5000);
-            },
-          });
-        } else {
-          alert("Please fill all the details");
+                maxw = ww + 300;
+                minw = -300;
+                maxh = wh + 300;
+              };
+
+              detectSize();
+
+              $(window).resize(detectSize);
+
+              if (!$("body").css("textShadow")) {
+                textShadowSupport = false;
+              }
+
+              /* Should work in Windows 7 /*
+      if (/windows/i.test(navigator.userAgent))
+      {
+          snowflakes = ['*']; // Windows sucks and doesn't have Unicode chars installed
+          //snowflakes = ['T']; //No FF support for Wingdings
+      }
+      */
+
+              // FF seems to just be able to handle like 50... 25 with rotation
+              // Safari seems fine with 150+... 75 with rotation
+              var i = 10;
+              while (i--) {
+                addFlake(true);
+              }
+
+              prevTime = new Date().getTime();
+              setInterval(move, 50);
+            }
+
+            function addFlake(initial) {
+              flakeCount++;
+
+              var sizes = [
+                {
+                  r: 1.0,
+                  css: {
+                    fontSize: 15 + Math.floor(Math.random() * 20) + "px",
+                    textShadow: "9999px 0 0 rgba(238, 238, 238, 0.5)",
+                  },
+                  v: 2,
+                },
+                {
+                  r: 0.6,
+                  css: {
+                    fontSize: 50 + Math.floor(Math.random() * 20) + "px",
+                    textShadow: "9999px 0 2px #eee",
+                  },
+                  v: 6,
+                },
+                {
+                  r: 0.2,
+                  css: {
+                    fontSize: 90 + Math.floor(Math.random() * 30) + "px",
+                    textShadow: "9999px 0 6px #eee",
+                  },
+                  v: 12,
+                },
+                {
+                  r: 0.1,
+                  css: {
+                    fontSize: 150 + Math.floor(Math.random() * 50) + "px",
+                    textShadow: "9999px 0 24px #eee",
+                  },
+                  v: 20,
+                },
+              ];
+
+              var $nowflake = $('<span class="winternetz">' + snowflakes[Math.floor(Math.random() * snowflakes.length)] + "</span>").css({
+                /*fontFamily: 'Wingdings',*/
+                color: "#eee",
+                display: "block",
+                position: "fixed",
+                background: "transparent",
+                width: "auto",
+                height: "auto",
+                margin: "0",
+                padding: "0",
+                textAlign: "left",
+                zIndex: 9999,
+              });
+
+              if (textShadowSupport) {
+                $nowflake.css("textIndent", "-9999px");
+              }
+
+              var r = Math.random();
+
+              var i = sizes.length;
+
+              var v = 0;
+
+              while (i--) {
+                if (r < sizes[i].r) {
+                  v = sizes[i].v;
+                  $nowflake.css(sizes[i].css);
+                  break;
+                }
+              }
+
+              var x = -300 + Math.floor(Math.random() * (ww + 300));
+
+              var y = 0;
+              if (typeof initial == "undefined" || !initial) {
+                y = -300;
+              } else {
+                y = -300 + Math.floor(Math.random() * (wh + 300));
+              }
+
+              $nowflake.css({
+                left: x + "px",
+                top: y + "px",
+              });
+
+              $nowflake.data("x", x);
+              $nowflake.data("y", y);
+              $nowflake.data("v", v);
+              $nowflake.data("half_v", Math.round(v * 0.5));
+
+              $("body").append($nowflake);
+            }
+
+            function move() {
+              if (Math.random() > 0.8) {
+                xv += -1 + Math.random() * 2;
+
+                if (Math.abs(xv) > 3) {
+                  xv = 3 * (xv / Math.abs(xv));
+                }
+              }
+
+              // Throttle code
+              var newTime = new Date().getTime();
+              var diffTime = newTime - prevTime;
+              prevTime = newTime;
+
+              if (diffTime < 55 && flakeCount < absMax) {
+                addFlake();
+              } else if (diffTime > 150) {
+                $("span.winternetz:first").remove();
+                flakeCount--;
+              }
+
+              $("span.winternetz").each(function () {
+                var x = $(this).data("x");
+                var y = $(this).data("y");
+                var v = $(this).data("v");
+                var half_v = $(this).data("half_v");
+
+                y += v;
+
+                x += Math.round(xv * v);
+                x += -half_v + Math.round(Math.random() * v);
+
+                // because flakes are rotating, the origin could be +/- the size of the flake offset
+                if (x > maxw) {
+                  x = -300;
+                } else if (x < minw) {
+                  x = ww;
+                }
+
+                if (y > maxh) {
+                  $(this).remove();
+                  flakeCount--;
+
+                  addFlake();
+                } else {
+                  $(this).data("x", x);
+                  $(this).data("y", y);
+
+                  $(this).css({
+                    left: x + "px",
+                    top: y + "px",
+                  });
+
+                  // only spin biggest three flake sizes
+                  if (v >= 6) {
+                    $(this).animate({ rotate: "+=" + half_v + "deg" }, 0);
+                  }
+                }
+              });
+            }
+          })(jQuery);
         }
+
+        $(function () {
+          $("#book_date").datepicker({});
+        });
       });
 
-      var popupEnable = "no";
-      var script_name = "/index";
-      if (script_name == "/gold-protection-payment") var time = 20000;
-      else var time = 10000;
+      $(window).load(function () {
+        //$('#book_date').datetimepicker();
 
-      popupEnable == "no"; //to disable popup temporarily
+        $(document).on("click", ".expandRates", function () {
+          //alert('asdf');
+          $("#expand_rates_modal").modal("toggle");
+          //$('.place_h5 strong').html($('.rate_price_how h4').html());
+          $(".tableRates").html($(".priceBlock").html());
+        });
 
-      /*setTimeout(function(){
+        $(".bookMe").click(function () {
+          var location_name = $(this).data("location");
+          $("#location_name").val(location_name);
+          $("#book_modal").modal("toggle");
+        });
 
-if($.cookie('ScratchCookies')) {
-  //$('#coin_modal').modal('show');
+        if ($("#RateBlock").length > 0) {
+          //$('#rates_modal').modal('show');
+        }
 
-}
-else
-{
-  var cookie_value=Math.floor(Math.random() * 26) + Date.now();
-  //alert(cookie_value);
-  $.cookie( 'ScratchCookies', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
-  $('#coin_modal').modal('show');
-}
+        // if($.cookie('fraudCookie2')) {
+        // 	}
+        // 	else
+        // 	{
+        // 		var cookie_value=Math.floor(Math.random() * 26) + Date.now();
+        // 		//alert(cookie_value);
+        // 		$.cookie( 'fraudCookie2', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
+        // 		$('#fraud_campaign_modal').modal('show');
+        // 	}
 
+        $("#book_submit").click(function (e) {
+          e.preventDefault();
+          var book_name = $("#book_name").val();
+          var book_mobile = $("#book_mobile").val();
+          var book_email = $("#book_email").val();
+          var book_date = $("#book_date").val();
+          var book_full = $("#book_full").val();
+          var location_name = $("#location_name").val();
 
-   
-}, 10000);*/
+          $("#book-status").remove();
 
-      /*if(popupEnable=='yes') {
-if(!$.cookie('CoinCookies12')) {
-setTimeout( function(){ 
-  var cookie_value=Math.floor(Math.random() * 26) + Date.now();
-    $.ajax({
-            url: "https://wafaenterprises.in/coin_check",
-            type: 'POST',
-            data: {cookie_value:cookie_value},
-            success:    
-              function(data){
-                if(data !="0"){
-          //console.log(data);
-          $('#coin_image').attr('src','https://wafaenterprises.in/coin_vouchers/'+data);
-          $('#coin_modal').modal('toggle');
-          var $image=$('#coin_image').attr('src');
-          //alert($image);
+          if (book_name != "" && book_mobile != "" && book_email != "" && book_date != "") {
+            $.ajax({
+              url: "https://wafaenterprises.in/book_appointment",
+              type: "POST",
+              data: { book_name: book_name, book_mobile: book_mobile, book_email: book_email, book_date: book_date, book_full: book_full, location_name: location_name },
+              success: function (data) {
+                $('<div id="book-status">' + data + "</div>").insertAfter("#book_modal .do-mdl-form h5");
 
-          $('.downloadImage').on('click',function(){
-      	
-              window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
-            });
-
-            $.cookie( 'CoinCookies12', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
-                }
+                setTimeout(function () {
+                  $("#book_modal").modal("toggle");
+                }, 5000);
               },
-            });	  
+            });
+          } else {
+            alert("Please fill all the details");
+          }
+        });
+
+        var popupEnable = "no";
+        var script_name = "/index";
+        if (script_name == "/gold-protection-payment") var time = 20000;
+        else var time = 10000;
+
+        popupEnable == "no"; //to disable popup temporarily
+
+        /*setTimeout(function(){
+
+  if($.cookie('ScratchCookies')) {
+    //$('#coin_modal').modal('show');
+
+  }
+  else
+  {
+    var cookie_value=Math.floor(Math.random() * 26) + Date.now();
+    //alert(cookie_value);
+    $.cookie( 'ScratchCookies', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
+    $('#coin_modal').modal('show');
+  }
+
+
+     
+ }, 10000);*/
+
+        /*if(popupEnable=='yes') {
+if(!$.cookie('CoinCookies12')) {
+  setTimeout( function(){ 
+    var cookie_value=Math.floor(Math.random() * 26) + Date.now();
+      $.ajax({
+              url: "https://wafaenterprises.in/coin_check",
+              type: 'POST',
+              data: {cookie_value:cookie_value},
+              success:    
+                function(data){
+                  if(data !="0"){
+            //console.log(data);
+            $('#coin_image').attr('src','https://wafaenterprises.in/coin_vouchers/'+data);
+            $('#coin_modal').modal('toggle');
+            var $image=$('#coin_image').attr('src');
+            //alert($image);
+
+            $('.downloadImage').on('click',function(){
+        	
+                window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
+              });
+
+              $.cookie( 'CoinCookies12', cookie_value, { expires: 14 }); // add the cookie with the name, value and expire (in days)
+                  }
+                },
+              });	  
 
 
 
 
 
 
-  }  , time );
+    }  , time );
 
 	
 
 }
 else
 {
-var cookie_value = $.cookie("CoinCookies12");
+  var cookie_value = $.cookie("CoinCookies12");
 
-setTimeout( function(){ 
-    $.ajax({
-            url: "https://wafaenterprises.in/coin_check",
-            type: 'POST',
-            data: {cookie_value:cookie_value},
-            success:    
-              function(data){
-                if(data !="0"){
-          //console.log(data);
-          $('#coin_image').attr('src','https://wafaenterprises.in/coin_vouchers/'+data);
-          $('#coin_modal').modal('toggle');
-          var $image=$('#coin_image').attr('src');
-          //alert($image);
+  setTimeout( function(){ 
+      $.ajax({
+              url: "https://wafaenterprises.in/coin_check",
+              type: 'POST',
+              data: {cookie_value:cookie_value},
+              success:    
+                function(data){
+                  if(data !="0"){
+            //console.log(data);
+            $('#coin_image').attr('src','https://wafaenterprises.in/coin_vouchers/'+data);
+            $('#coin_modal').modal('toggle');
+            var $image=$('#coin_image').attr('src');
+            //alert($image);
 
-          $('.downloadImage').on('click',function(){
-      	
-              window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
-            });					    	
-                }
-              },
-            });	  
-
-
+            $('.downloadImage').on('click',function(){
+        	
+                window.location.href="https://wafaenterprises.in/download?image="+encodeURIComponent($image);
+              });					    	
+                  }
+                },
+              });	  
 
 
 
 
-  }  , time );
+
+
+    }  , time );
 	
 }
 
 }*/
-    });
-
-    function animate() {
-      $svg.drawsvg("animate");
-    }
-    animate();
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $("#countryId").change(function () {
-        var val = $(this).val();
-        $.ajax({
-          type: "POST",
-          url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_state_ajax",
-          data: { country: val },
-          cache: false,
-          success: function (msg) {
-            if (msg != "") {
-              //console.log(msg);
-              //$('#stateName').chosen('destroy')
-              $("#stateId").html(msg);
-              //$(".chzn-select").chosen();
-            }
-          },
-        });
-
-        $.ajax({
-          type: "POST",
-          url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_city_country_ajax",
-          data: { country: val },
-          cache: false,
-          success: function (msg) {
-            if (msg != "") {
-              //console.log(msg);
-              //$('#stateName').chosen('destroy')
-              $("#cityId").html(msg);
-              //$(".chzn-select").chosen();
-            }
-          },
-        });
       });
 
-      $("#stateId").change(function () {
-        var val = $(this).val();
-        $.ajax({
-          type: "POST",
-          url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_city_ajax",
-          data: { state: val },
-          cache: false,
-          success: function (msg) {
-            if (msg != "") {
-              //console.log(msg);
-              //$('#stateName').chosen('destroy')
-              $("#cityId").html(msg);
-              //$(".chzn-select").chosen();
-            }
-          },
-        });
-      });
+      function animate() {
+        $svg.drawsvg("animate");
+      }
+      animate();
+    </script>
 
-      $("#cityId").change(function () {
-        var val = $(this).val();
-        if (val != "") {
-          $("#rateSubmit").trigger("click");
-        }
-      });
-
-      $("#rateSubmit").click(function (e) {
-        e.preventDefault();
-        var countryId = $("#countryId").val();
-        var stateId = $("#stateId").val();
-        var cityId = $("#cityId").val();
-        if (countryId == "" || stateId == "" || cityId == "") {
-          $(".rate_price_how").html('<p class="redAlert">Please select store location before submission</p>');
-        } else {
+    <script>
+      $(document).ready(function () {
+        $("#countryId").change(function () {
+          var val = $(this).val();
           $.ajax({
             type: "POST",
-            url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_rate",
-            data: { countryId: countryId, stateId: stateId, cityId: cityId },
-            dataType: "json",
+            url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_state_ajax",
+            data: { country: val },
             cache: false,
             success: function (msg) {
-              if (msg.html != "") {
+              if (msg != "") {
                 //console.log(msg);
                 //$('#stateName').chosen('destroy')
-                $(".rate_price_how").html(msg.html);
-                $(".last5Block strong span").text(msg.place_name);
-                $(".blackHeading strong").html(msg.heading);
-                $("div.contentPara").html(msg.content);
-                $(".ajaxList").html(msg.previous_dates_html);
-                $(".rate_18k_strong").text(msg.today_18k);
-                $(".rate_22k_strong").text(msg.today_22k);
-                $(".rate_24k_strong").text(msg.today_24k);
-                $(".row.oi-gr-btm-text>div.col-sm-6:first-child").css("visibility", "hidden");
-                //$('.updated_time').text(msg.updated_time);
+                $("#stateId").html(msg);
                 //$(".chzn-select").chosen();
-
-                if (msg.disclaimer != "") {
-                  $(".disclaimer").html(msg.disclaimer);
-                } else {
-                  $(".disclaimer").html("");
-                }
-              } else {
-                $(".rate_price_how").html('<p class="redAlert">Sorry. results are not available at the moment. Please try again later</p>');
               }
             },
           });
-        }
+
+          $.ajax({
+            type: "POST",
+            url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_city_country_ajax",
+            data: { country: val },
+            cache: false,
+            success: function (msg) {
+              if (msg != "") {
+                //console.log(msg);
+                //$('#stateName').chosen('destroy')
+                $("#cityId").html(msg);
+                //$(".chzn-select").chosen();
+              }
+            },
+          });
+        });
+
+        $("#stateId").change(function () {
+          var val = $(this).val();
+          $.ajax({
+            type: "POST",
+            url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_city_ajax",
+            data: { state: val },
+            cache: false,
+            success: function (msg) {
+              if (msg != "") {
+                //console.log(msg);
+                //$('#stateName').chosen('destroy')
+                $("#cityId").html(msg);
+                //$(".chzn-select").chosen();
+              }
+            },
+          });
+        });
+
+        $("#cityId").change(function () {
+          var val = $(this).val();
+          if (val != "") {
+            $("#rateSubmit").trigger("click");
+          }
+        });
+
+        $("#rateSubmit").click(function (e) {
+          e.preventDefault();
+          var countryId = $("#countryId").val();
+          var stateId = $("#stateId").val();
+          var cityId = $("#cityId").val();
+          if (countryId == "" || stateId == "" || cityId == "") {
+            $(".rate_price_how").html('<p class="redAlert">Please select store location before submission</p>');
+          } else {
+            $.ajax({
+              type: "POST",
+              url: "https://wafaenterprises.in/wafa_gold_rates/ajax/get_rate",
+              data: { countryId: countryId, stateId: stateId, cityId: cityId },
+              dataType: "json",
+              cache: false,
+              success: function (msg) {
+                if (msg.html != "") {
+                  //console.log(msg);
+                  //$('#stateName').chosen('destroy')
+                  $(".rate_price_how").html(msg.html);
+                  $(".last5Block strong span").text(msg.place_name);
+                  $(".blackHeading strong").html(msg.heading);
+                  $("div.contentPara").html(msg.content);
+                  $(".ajaxList").html(msg.previous_dates_html);
+                  $(".rate_18k_strong").text(msg.today_18k);
+                  $(".rate_22k_strong").text(msg.today_22k);
+                  $(".rate_24k_strong").text(msg.today_24k);
+                  $(".row.oi-gr-btm-text>div.col-sm-6:first-child").css("visibility", "hidden");
+                  //$('.updated_time').text(msg.updated_time);
+                  //$(".chzn-select").chosen();
+
+                  if (msg.disclaimer != "") {
+                    $(".disclaimer").html(msg.disclaimer);
+                  } else {
+                    $(".disclaimer").html("");
+                  }
+                } else {
+                  $(".rate_price_how").html('<p class="redAlert">Sorry. results are not available at the moment. Please try again later</p>');
+                }
+              },
+            });
+          }
+        });
+
+        // $.ajax({
+        //            type: "POST",
+        //            url: "wafa_gold_rates/ajax/get_menu_rate",
+        //            data: {countryId:1},  //1 for India
+        //            dataType: "json",
+        //            cache: false,
+        //            success: function(msg){
+        //                if(msg!='')
+        //                {
+        //                   // alert(msg.rate_18k);
+
+        //                    $('.menu_updated_date').text(msg.updated_time);
+        //                    $('.menu_18k .text-dark').text(msg.rate_18k);
+        //                    $('.menu_22k .text-dark').text(msg.rate_22k);
+        //                    $('.menu_24k .text-dark').text(msg.rate_24k);
+
+        //                }
+
+        //            }
+        //        });
       });
+    </script>
 
-      // $.ajax({
-      //            type: "POST",
-      //            url: "wafa_gold_rates/ajax/get_menu_rate",
-      //            data: {countryId:1},  //1 for India
-      //            dataType: "json",
-      //            cache: false,
-      //            success: function(msg){
-      //                if(msg!='')
-      //                {
-      //                   // alert(msg.rate_18k);
-
-      //                    $('.menu_updated_date').text(msg.updated_time);
-      //                    $('.menu_18k .text-dark').text(msg.rate_18k);
-      //                    $('.menu_22k .text-dark').text(msg.rate_22k);
-      //                    $('.menu_24k .text-dark').text(msg.rate_24k);
-
-      //                }
-
-      //            }
-      //        });
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      //$('.oi-right-menu li').first().addClass("active").find('.oi-right-menu__sub').show();
-      $(".oi-right-menu__sub").parent().addClass("oi-right-menu__list");
-      $(".oi-right-menu > li > a").click(function () {
-        if ($(this).attr("class") != "active") {
-          $(".oi-right-menu li .oi-right-menu__sub").slideUp();
-          $(this).next().slideToggle();
-          $(".oi-right-menu li a").removeClass("active");
-          $(this).addClass("active");
-        }
+    <script>
+      $(document).ready(function () {
+        //$('.oi-right-menu li').first().addClass("active").find('.oi-right-menu__sub').show();
+        $(".oi-right-menu__sub").parent().addClass("oi-right-menu__list");
+        $(".oi-right-menu > li > a").click(function () {
+          if ($(this).attr("class") != "active") {
+            $(".oi-right-menu li .oi-right-menu__sub").slideUp();
+            $(this).next().slideToggle();
+            $(".oi-right-menu li a").removeClass("active");
+            $(this).addClass("active");
+          }
+        });
       });
-    });
-  </script>
+    </script>
 
-  <!-- scam popup -->
-  <!-- <div class="modal fade" id="scam" tabindex="-1" role="dialog" aria-labelledby="scamModalLabel" aria-hidden="true">
+    <!-- scam popup -->
+    <!-- <div class="modal fade" id="scam" tabindex="-1" role="dialog" aria-labelledby="scamModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content"> 
 			<div class="modal-body">
@@ -2607,70 +2584,70 @@ setTimeout( function(){
 		</div>
 	</div>
 </div> -->
-  <!-- <script type="text/javascript">
+    <!-- <script type="text/javascript">
     $(window).on('load', function() {
         $('#scam').modal('show');
 		$('body').css('padding-right',0);
     });
 </script> -->
-  <style>
-    .popup_container.show {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-      opacity: 0 !important;
-    }
+    <style>
+      .popup_container.show {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+      }
 
-    /* @media (min-width: 992px){
+      /* @media (min-width: 992px){
 		#scam .modal-lg {
 			max-width: 800px;
 		}
 	} */
-    .modal-open #scam.modal {
-      overflow-y: hidden;
-    }
-
-    @media (min-width: 576px) {
-      #scam .modal-dialog-centered {
-        min-height: calc(100% - (1.75rem * 2));
+      .modal-open #scam.modal {
+        overflow-y: hidden;
       }
 
-      /* #scam .modal-dialog {
+      @media (min-width: 576px) {
+        #scam .modal-dialog-centered {
+          min-height: calc(100% - (1.75rem * 2));
+        }
+
+        /* #scam .modal-dialog {
 			max-width: 500px;
 			margin: 30px auto;
 		} */
-    }
+      }
 
-    #scam .modal-dialog-centered {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      min-height: calc(100% - (0.5rem * 2));
-    }
+      #scam .modal-dialog-centered {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: calc(100% - (0.5rem * 2));
+      }
 
-    #scam .modal-content {
-      position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      width: 100%;
-      pointer-events: auto;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 0.3rem;
-      outline: 0;
-    }
-  </style>
+      #scam .modal-content {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+      }
+    </style>
 
-  <script src="./files/api.js.download"></script>
+    <script src="./files/api.js.download"></script>
 
 
 
