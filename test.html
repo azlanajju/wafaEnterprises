@@ -3,264 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive Phone Number</title>
     <style>
-    /* Existing styles remain unchanged */
-    .wafaseasons-container {
-        max-width: 1280px;
-        margin: 60px auto;
-        padding: 50px;
-        background-color: #ffffff;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        overflow: hidden;
-    }
-
-    .wafaseasons-season, .wafaseasons-brochure {
-        margin-bottom: 60px;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-
-    .wafaseasons-season:nth-child(1), .wafaseasons-brochure:nth-child(1) { animation-delay: 0.1s; }
-    .wafaseasons-season:nth-child(2), .wafaseasons-brochure:nth-child(2) { animation-delay: 0.2s; }
-    .wafaseasons-season:nth-child(3), .wafaseasons-brochure:nth-child(3) { animation-delay: 0.3s; }
-    .wafaseasons-season:nth-child(4), .wafaseasons-brochure:nth-child(4) { animation-delay: 0.4s; }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .wafaseasons-season-title {
-        font-size: 2.4rem;
-        font-weight: 700;
-        color: #1a202c;
-        margin-bottom: 25px;
-        position: relative;
-        padding-left: 25px;
-        border-left: 5px solid #facc15;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .wafaseasons-season-title::after {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 25px;
-        width: 60px;
-        height: 3px;
-        background-color: #facc15;
-        border-radius: 2px;
-    }
-
-    .wafaseasons-images {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        justify-content: center;
-    }
-
-    .wafaseasons-image {
-        flex: 1 1 300px;
-        max-width: 360px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer; /* Indicates clickability */
-    }
-
-    .wafaseasons-image:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .wafaseasons-image img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        display: block;
-        border-radius: 10px;
-    }
-
-    .wafaseasons-brochure img {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 10px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Modal Styles */
-    .wafaseasons-modal {
-        display: none; /* Hidden by default */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-        z-index: 1000; /* Above everything */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .wafaseasons-modal-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90vh;
-        overflow: auto;
-        animation: popIn 0.3s ease-out;
-    }
-
-    .wafaseasons-modal-content img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    @keyframes popIn {
-        from {
-            transform: scale(0.8);
-            opacity: 0;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .wafaseasons-image {
-            flex: 1 1 45%;
-            max-width: 45%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .wafaseasons-container {
-            margin: 30px 15px;
-            padding: 25px;
+        /* Style the li to look clickable */
+        .phone-item {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .wafaseasons-season-title {
-            font-size: 2rem;
-            padding-left: 15px;
+        /* Hidden menu styling */
+        .menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .wafaseasons-images {
-            gap: 15px;
+        .menu div {
+            padding: 5px;
+            cursor: pointer;
         }
 
-        .wafaseasons-image {
-            flex: 1 1 100%;
-            max-width: 100%;
+        .menu div:hover {
+            background-color: #f5f5f5;
         }
-
-        .wafaseasons-image img {
-            height: 200px;
-        }
-
-        .wafaseasons-brochure img {
-            max-width: 100%;
-        }
-    }
     </style>
 </head>
 <body>
-    <div class="wafaseasons-container">
-        <!-- Season 6 Section -->
-        <div class="wafaseasons-season">
-            <h2 class="wafaseasons-season-title">Season 6</h2>
-            <div class="wafaseasons-images">
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Season+6+Image+1" alt="Season 6 Image 1" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Season+6+Image+2" alt="Season 6 Image 2" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Season+6+Image+3" alt="Season 6 Image 3" />
-                </div>
-            </div>
-        </div>
-    
-        <!-- Brochure Section -->
-        <div class="wafaseasons-brochure">
-            <h2 class="wafaseasons-season-title">Brochure</h2>
-            <div class="wafaseasons-images">
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/800x400?text=Season+6+Brochure" alt="Season 6 Brochure" />
-                </div>
-            </div>
-        </div>
-    
-        <!-- Surprise Winners Section -->
-        <div class="wafaseasons-season">
-            <h2 class="wafaseasons-season-title">Surprise Winners</h2>
-            <div class="wafaseasons-images">
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Surprise+Winner+1" alt="Surprise Winner 1" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Surprise+Winner+2" alt="Surprise Winner 2" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Surprise+Winner+3" alt="Surprise Winner 3" />
-                </div>
-            </div>
-        </div>
-    
-        <!-- Draw Winners Section -->
-        <div class="wafaseasons-season">
-            <h2 class="wafaseasons-season-title">Draw Winners</h2>
-            <div class="wafaseasons-images">
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Draw+Winner+1" alt="Draw Winner 1" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Draw+Winner+2" alt="Draw Winner 2" />
-                </div>
-                <div class="wafaseasons-image">
-                    <img src="https://via.placeholder.com/360x240?text=Draw+Winner+3" alt="Draw Winner 3" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal Overlay -->
-    <div class="wafaseasons-modal" id="imageModal">
-        <div class="wafaseasons-modal-content">
-            <img id="modalImage" src="" alt="Modal Image" />
-        </div>
-    </div>
-</body>
-<script>
-    const images = document.querySelectorAll('.wafaseasons-image img');
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
+    <ul>
+        <li class="phone-item" onclick="toggleMenu(event)">8147438098</li>
+    </ul>
 
-    images.forEach(image => {
-        image.addEventListener('click', () => {
-            modalImage.src = image.src;
-            modal.style.display = 'flex';
-        });
-    });
+    <div id="menu" class="menu">
+        <div onclick="selectOption('gold')">Gold and Diamond</div>
+        <div onclick="selectOption('furniture')">Furniture</div>
+    </div>
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+    <script>
+        // Toggle the menu visibility
+        function toggleMenu(event) {
+            const menu = document.getElementById('menu');
+            const li = event.target;
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+                // Position the menu below the li
+                menu.style.left = li.offsetLeft + 'px';
+                menu.style.top = (li.offsetTop + li.offsetHeight) + 'px';
+            }
         }
-    });
-</script>
+
+        // Handle option selection
+        function selectOption(choice) {
+            const menu = document.getElementById('menu');
+            const phoneNumber = document.querySelector('.phone-item').textContent; // Get the phone number from the li
+            menu.style.display = 'none'; // Hide menu after selection
+            if (choice === 'gold') {
+                alert('Gold and Diamond - Coming Soon!');
+            } else if (choice === 'furniture') {
+                // Trigger a phone call using the tel: URI
+                window.location.href = `tel:${phoneNumber}`;
+            }
+        }
+
+        // Close menu if clicked outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const li = document.querySelector('.phone-item');
+            if (!li.contains(event.target) && !menu.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
