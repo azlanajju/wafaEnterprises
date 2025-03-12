@@ -190,7 +190,7 @@
                 </ul>
             </div> -->
 
-            <div class="wafacall-top-left" style="display: inline-block; float: left; padding: 10px;">
+            <!-- <div class="wafacall-top-left" style="display: inline-block; float: left; padding: 10px;">
               <ul class="wafacall-navbar-nav" style="list-style: none; margin: 0; padding: 0;">
                   <li class="wafacall-nav-item" style="display: inline-block; position: relative;">
                       <ul class="wafacall-social phoneVisible" style="list-style: none; margin: 0; padding: 0; display: flex; gap: 15px; align-items: center;">
@@ -200,14 +200,13 @@
                               </a>
                           </li>
                       </ul>
-                      <!-- Popup Menu Centered -->
                       <div id="wafacall-menu" class="wafacall-menu" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 15px; z-index: 1000; min-width: 200px; text-align: center;">
                           <div onclick="selectWafaOption('furniture')" style="padding: 10px; color: #333; font-family: Arial, sans-serif; font-size: 16px; cursor: pointer; border-bottom: 1px solid #eee; transition: background 0.3s;">Furniture</div>
                           <div onclick="selectWafaOption('gold')" style="padding: 10px; color: #333; font-family: Arial, sans-serif; font-size: 16px; cursor: pointer; transition: background 0.3s;">Gold and Diamonds</div>
                       </div>
                   </li>
               </ul>
-          </div>
+          </div> -->
           
           <!-- Include Ionicons for the call icon -->
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -232,8 +231,8 @@
                   if (choice === 'furniture') {
                       window.location.href = 'tel:+918147438098'; // Furniture number
                   } else if (choice === 'gold') {
-                      alert('Gold and Diamonds - Coming Soon!'); // Placeholder for gold number
-                      // Uncomment below and replace with actual number when ready
+                    window.location.href = 'tel:+9901068874'; // Furniture number
+                    // Uncomment below and replace with actual number when ready
                       // window.location.href = 'tel:+919876543210';
                   }
               }
@@ -479,11 +478,53 @@
         <h1 class="wafafounder-seasons-title " style="color: white  !important;">Wafa Enterprises</h1>
         <p>Experience a smarter way to save with us. Trusted by over 30,000 customers</p>
         <div class="homeBtns">
-          <button
-            onclick="window.location.href='https://wa.me/919901068874?text=Hi,%20I%20would%20like%20to%20register'">
-            Contact us
-          </button>
-        </div>
+          <button onclick="toggleContactOptions()">Contact Us</button>
+          <div class="contact-options" id="contactOptions">
+              <a href="https://wa.me/918147438098?text=Hi,%20I%20would%20like%20to%20register%20for%20Furnitures" class="contact-option">Furnitures</a>
+              <a href="https://wa.me/919901068874?text=Hi,%20I%20would%20like%20to%20register%20for%20Gold%20and%20Diamonds" class="contact-option">Gold & Diamonds</a>
+          </div>
+      </div>
+      
+      <style>
+          .homeBtns {
+              position: relative;
+              display: inline-block;
+          }
+      
+          .contact-options {
+              display: none;
+              position: absolute;
+              top: 50px;
+              left: 0;
+              background: white;
+              border: 1px solid #ddd;
+              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+              padding: 10px;
+              border-radius: 5px;
+              z-index: 10;
+          }
+      
+          .contact-option {
+              display: block;
+              padding: 10px;
+              text-decoration: none;
+              color: #333;
+              font-weight: bold;
+              transition: background 0.3s;
+          }
+      
+          .contact-option:hover {
+              background: #f4f4f4;
+          }
+      </style>
+      
+      <script>
+          function toggleContactOptions() {
+              var options = document.getElementById("contactOptions");
+              options.style.display = options.style.display === "block" ? "none" : "block";
+          }
+      </script>
+      
         <style>
           .homeBtns {
             display: flex;
@@ -1322,9 +1363,11 @@
   
             <br><br>
             <section class="organisations-section">
-              <h2 class="wafafounder-seasons-title" data-aos-delay="100" data-aos="fade-up">OUR ORGANISATIONS</h2>
+              <h2 class="wafafounder-seasons-title" data-aos-delay="100" data-aos="fade-up">
+                  OUR ORGANISATIONS
+              </h2>
               <div class="organisations-cards">
-                <a href="./business/" class="card-link">
+                  <!-- Wafa Furnitures (Clickable View More) -->
                   <div class="card">
                       <div class="card-inner">
                           <div class="card-front">
@@ -1332,36 +1375,39 @@
                               <h3 class="card-title">Wafa Furnitures</h3>
                           </div>
                           <div class="card-back">
-                              <span style="color: #000;">View More</span>
+                              <a href="./business/" class="view-more-link">View More</a>
                           </div>
                       </div>
                   </div>
-              </a>
-              
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <img src="./Images/product-jpeg.jpg" alt="Wafa Gold and Diamonds" class="card-img">
-                      <h3 class="card-title">Wafa Gold and Diamonds</h3>
-                    </div>
-                    <div class="card-back">
-                      Coming Soon
-                    </div>
+          
+                  <!-- Wafa Gold and Diamonds (Not Clickable) -->
+                  <div class="card">
+                      <div class="card-inner">
+                          <div class="card-front">
+                              <img src="./Images/product-jpeg.jpg" alt="Wafa Gold and Diamonds" class="card-img">
+                              <h3 class="card-title">Wafa Gold and Diamonds</h3>
+                          </div>
+                          <div class="card-back">
+                              Coming Soon
+                          </div>
+                      </div>
                   </div>
-                </div>
-                <div class="card">
-                  <div class="card-inner">
-                    <div class="card-front">
-                      <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Real Estate" class="card-img">
-                      <h3 class="card-title">Wafa Builders and Developers</h3>
-                    </div>
-                    <div class="card-back">
-                      Coming Soon
-                    </div>
+          
+                  <!-- Wafa Builders and Developers (Not Clickable) -->
+                  <div class="card">
+                      <div class="card-inner">
+                          <div class="card-front">
+                              <img src="./Images/luxury-residential-real-estate.png" alt="Wafa Real Estate" class="card-img">
+                              <h3 class="card-title">Wafa Builders and Developers</h3>
+                          </div>
+                          <div class="card-back">
+                              Coming Soon
+                          </div>
+                      </div>
                   </div>
-                </div>
               </div>
-            </section>
+          </section>
+
             <div class="wafafounder-seasons-section">
               <h2 class="wafafounder-seasons-title" data-aos-delay="100" data-aos="fade-up">SEASONS</h2>
               <div class="seasons-container" data-aos-delay="100" data-aos="fade-up">
@@ -1405,6 +1451,7 @@
                   .season-card-link {
                       text-decoration: none;
                       color: inherit;
+                      
                   }
           
                   .season-card {
@@ -1468,118 +1515,121 @@
   
           <style>
             .organisations-section {
-              max-width: 1200px;
-              margin: 0 auto;
-              padding: 40px 20px;
-              text-align: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px;
+                text-align: center;
             }
-  
-            .organisations-title {
-              font-size: 36px;
-              color: #333;
-              margin-bottom: 40px;
-              position: relative;
-            }
-  
-            .organisations-title::after {
-              content: '';
-              width: 80px;
-              height: 3px;
-              background: linear-gradient(to right, #3498db, #2ecc71);
-              position: absolute;
-              bottom: -10px;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-  
+        
             .organisations-cards {
-              display: flex;
-              justify-content: center;
-              gap: 30px;
-              flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
             }
-  
+        
             .card {
-              width: 300px;
-              height: 250px;
-              position: relative;
-              perspective: 1000px;
+                width: 300px;
+                height: 250px;
+                position: relative;
+                perspective: 1000px;
             }
-  
+        
             .card-inner {
-              width: 100%;
-              height: 100%;
-              position: relative;
-              transform-style: preserve-3d;
-              transition: transform 0.6s ease;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 0.6s ease;
             }
-  
+        
             .card:hover .card-inner {
-              transform: rotateY(180deg);
+                transform: rotateY(180deg);
             }
-  
+        
             .card-front,
             .card-back {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
             }
-  
+        
             .card-front {
-              background: #fff;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-              padding: 20px;
-              padding-bottom: 0; /* Remove extra bottom padding */
-              justify-content: flex-start; /* Align content to the top */
-            }
-  
-            .card-back {
-              background: linear-gradient(135deg, #ffeb3b, #f39c12);
-              /* Yellow gradient */
-              transform: rotateY(180deg);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: #333;
-              /* Darker text for contrast */
-              font-size: 24px;
-              font-weight: bold;
-              text-transform: uppercase;
-            }
-  
-            .card-img {
-              width: 100%;
-              height: 70%;
-              object-fit: cover;
-              border-radius: 10px 10px 0 0;
-            }
-  
-            .card-title {
-              font-size: 20px;
-              color: #333;
-              margin-top: 15px;
-              font-weight: 600;
-            }
-  
-            @media (max-width: 768px) {
-              .organisations-cards {
+                background: #fff;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
-              }
-  
-              .card {
-                width: 100%;
-                max-width: 300px;
-              }
+                justify-content: flex-start;
+                padding: 20px;
             }
-          </style>
+        
+            .card-back {
+                background: linear-gradient(135deg, #ffeb3b, #f39c12);
+                transform: rotateY(180deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333;
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        
+            .card-img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+        
+            .card-title {
+                font-size: 20px;
+                color: #333;
+                margin-top: 15px;
+                font-weight: 600;
+            }
+        
+            /* Styling for the clickable "View More" */
+           /* Styling for the clickable "View More" */
+.view-more-link {
+    color: inherit; /* Match parent color */
+    font-weight: inherit; /* Inherit boldness from parent */
+    font-size: inherit; /* Keep same font size */
+    text-decoration: none;
+    display: block; /* Ensure it takes full space */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-more-link:hover {
+    color: #b8962e;
+}
+
+        
+            .view-more-link:hover {
+                color: #b8962e;
+            }
+        
+            @media (max-width: 768px) {
+                .organisations-cards {
+                    flex-direction: column;
+                    align-items: center;
+                }
+        
+                .card {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        </style>
   
   
   
